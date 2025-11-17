@@ -469,19 +469,29 @@ def index():
 
     # === NTX 自定义排序：进行中 / 有效活动在前，已结束和无效在后 ===
     def _ntx_sort_key(p):
-        status = (p.get("latest_status") or "").strip()
+        # 直接从 latest 计算状态，不依赖 latest_status 字段
+        latest = p.get("latest") or {}
+        status = _build_status(latest) if latest else ""
 
-        # 按状态分层：
-        # 0: 进行中 / 有新活动
-        # 1: 已结束
-        # 2: 暂无活动 / 拉取失败 / 其它异常
-        rank = 2
-        if any(x in status for x in ("进行中", "有最新活动", "最新活动")):
-            rank = 0
-        elif "已结束" in status:
-            rank = 1
-        elif any(x in status for x in ("暂无活动", "拉取失败", "抓取失败")):
+        # 按状态分层，排序顺序：
+        # 0: 未开始
+        # 1: 进行中
+        # 2: 未知
+        # 3: 已结束
+        # 4: 暂无活动 / 拉取失败 / 其它异常
+        rank = 4
+        if not latest or "暂无活动" in status or "拉取失败" in status or "抓取失败" in status:
+            rank = 4
+        elif "已结束" in status or "🔴" in status:
+            rank = 3
+        elif "未知" in status or "🟠" in status:
             rank = 2
+        elif "进行中" in status or "✅" in status or "有最新活动" in status or "最新活动" in status:
+            rank = 1
+        elif "未开始" in status or "⏳" in status or "即将开始" in status:
+            rank = 0
+        else:
+            rank = 4
 
         latest = p.get("latest") or {}
         # Galxe 返回的一般是秒级时间戳，这里统一成 int 方便比较
@@ -501,13 +511,18 @@ def index():
     def _ntx_status_group(p):
         latest = p.get("latest") or {}
         status = _build_status(latest) or ""
-        if "进行中" in status:
+        # 排序顺序：0-未开始 1-进行中 2-未知 3-已结束 4-暂无活动
+        if not latest:
+            return 4  # 暂无活动
+        if "未开始" in status or "⏳" in status or "即将开始" in status:
             return 0
-        if ("未开始" in status) or ("即将开始" in status):
+        if "进行中" in status or "✅" in status:
             return 1
-        if "已结束" in status or "结束" in status:
+        if "未知" in status or "🟠" in status:
             return 2
-        return 3
+        if "已结束" in status or "🔴" in status or "结束" in status:
+            return 3
+        return 4  # 其他视为暂无活动
 
     sorted_projs = sorted(
         projs,
@@ -2048,9 +2063,9 @@ def _ntx_index_override():
           background: rgba(34,197,94,0.1);
         }}
         .pill-upcoming {{
-          border-color: #facc15;
-          color: #fef9c3;
-          background: rgba(250,204,21,0.08);
+          border-color: #6b7280;
+          color: #d1d5db;
+          background: rgba(107,114,128,0.1);
         }}
         .pill-ended {{
           border-color: #fb7185;
