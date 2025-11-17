@@ -310,6 +310,18 @@ def _load_initial_state():
         pass
     return {"last_loop": "", "projects": []}
 
+def format_time_utc8(utc_str):
+    """将 UTC 时间转换为 UTC+8 格式"""
+    if not utc_str:
+        return ""
+    try:
+        from datetime import datetime, timedelta, timezone
+        dt_utc = datetime.fromisoformat(utc_str.replace('Z', '+00:00'))
+        utc8 = dt_utc.astimezone(timezone(timedelta(hours=8)))
+        return utc8.strftime('%Y-%m-%d %H:%M:%S')
+    except:
+        return utc_str
+
 monitor_state = _load_initial_state()
 
 
@@ -508,6 +520,7 @@ def index():
     )
     cards = "".join(card_html(p) for p in sorted_projs)
     last = monitor_state.get("last_loop", "")
+    last_utc8 = format_time_utc8(last)
 
     active_all = "active" if cat == "all" else ""
     active_custom = "active" if cat == "custom" else ""
@@ -721,7 +734,7 @@ def index():
           </div>
 
           <div class="subtitle">
-            模式：公开 API（不依赖 Space Owner 权限） · 最后刷新：{last}
+            最后刷新：{last_utc8}
           </div>
 
           <div class="top-bar">
@@ -753,7 +766,7 @@ def index():
     </body>
     </html>
     """.format(
-        last=last,
+        last_utc8=last_utc8,
         pwd=cfg["webui_password"],
         q=q,
         active_all=active_all,
@@ -1941,6 +1954,7 @@ def _ntx_index_override():
     sorted_projs = _ntx_sort_projects(projs)
     cards = "".join(card_html(p) for p in sorted_projs)
     last = monitor_state.get("last_loop", "")
+    last_utc8 = format_time_utc8(last)
 
     active_all = "active" if cat == "all" else ""
     active_custom = "active" if cat == "custom" else ""
@@ -2190,6 +2204,7 @@ def index_v4():
     sorted_projs = _ntx_sort_projects_v4(projs)
     cards = "".join(card_html(p) for p in sorted_projs)
     last = monitor_state.get("last_loop", "")
+    last_utc8 = format_time_utc8(last)
 
     active_all = "active" if cat == "all" else ""
     active_custom = "active" if cat == "custom" else ""
@@ -2403,7 +2418,7 @@ def index_v4():
           </div>
 
           <div class="subtitle">
-            模式：公开 API（不依赖 Space Owner 权限） · 最后刷新：{last}
+            最后刷新：{last_utc8}
           </div>
 
           <div class="top-bar">
@@ -2471,6 +2486,7 @@ def index_v4():
 
     cards = "".join(card_html(p) for p in sorted_projs)
     last = monitor_state.get("last_loop", "")
+    last_utc8 = format_time_utc8(last)
 
     active_all = "active" if cat == "all" else ""
     active_custom = "active" if cat == "custom" else ""
@@ -2786,7 +2802,7 @@ def index_v4():
                 <span class="dot green"></span>运行正常
               </div>
               <div class="app-meta-row">
-                最后刷新：{last}
+                最后刷新：{last_utc8}
               </div>
               <div class="app-meta-row">
                 登录密码：<code>{pwd}</code>
