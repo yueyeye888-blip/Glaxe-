@@ -18,9 +18,9 @@ from datetime import datetime, timezone, timedelta
 import requests
 from flask import Flask, request
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CONFIG_PATH = os.path.join(ROOT, "config_files", "config.json")
-STATE_PATH = os.path.join(ROOT, "data", "monitor_state.json")
+ROOT = "/opt/GalxeMonitor"
+CONFIG_PATH = os.path.join(ROOT, "config.json")
+STATE_PATH = os.path.join(ROOT, "monitor_state.json")
 OPENAPI_URL = "https://graphigo.prd.galaxy.eco/query"
 
 last_notified = {}  # alias -> last campaign id
@@ -299,18 +299,7 @@ def send_notifications(cfg, project_name, alias, latest, url):
 
 # =============== 监控主循环 ===============
 
-# 初始化监控状态，启动时从文件加载
-def _load_initial_state():
-    import os, json
-    try:
-        if os.path.exists(STATE_PATH):
-            with open(STATE_PATH, 'r', encoding='utf-8') as f:
-                return json.load(f)
-    except:
-        pass
-    return {"last_loop": "", "projects": []}
-
-monitor_state = _load_initial_state()
+monitor_state = {"last_loop": "", "projects": []}
 
 
 def monitor_loop():
@@ -1256,8 +1245,7 @@ if __name__ == "__main__":
     print("Web UI 密码:", cfg.get("webui_password"))
     print("访问: http://服务器IP:{}/?pwd={}".format(cfg["webui_port"], cfg["webui_password"]))
 
-    # 禁用后台监控线程（API 可能不可用），直接使用文件中的数据
-    # start_monitor()
+    start_monitor()
     app.run(host="0.0.0.0", port=cfg["webui_port"], debug=False)
 
 # ===== NTX 扩展：提供统一 JSON 接口 /api/raw =====
