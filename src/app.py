@@ -597,94 +597,102 @@ def index():
           color: #9ca3af;
           margin-bottom: 14px;
         }}
-        .top-bar {{
+        .controls-bar {{
           display: flex;
-          flex-direction: column;
-          gap: 16px;
-          margin-bottom: 20px;
-          padding: 16px 20px;
-          background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(2, 6, 23, 0.8) 100%);
-          border: 1px solid rgba(96, 165, 250, 0.1);
-          border-radius: 12px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-          backdrop-filter: blur(10px);
-        }}
-        
-        .search-wrapper {{
-          flex: 1;
-          max-width: 400px;
-        }}
-        
-        .search-box {{
-          display: flex;
-          gap: 8px;
+          justify-content: space-between;
           align-items: center;
-        }}
-        
-        .search-box input {{
-          flex: 1;
-          background: rgba(17, 24, 39, 0.8);
-          border-radius: 8px;
-          border: 1px solid rgba(96, 165, 250, 0.2);
-          padding: 10px 14px;
-          color: #e5e7eb;
-          outline: none;
-          font-size: 13px;
-          transition: all 0.3s ease;
-        }}
-        
-        .search-box input:focus {{
-          border-color: rgba(96, 165, 250, 0.4);
-          background: rgba(17, 24, 39, 1);
-          box-shadow: 0 0 12px rgba(96, 165, 250, 0.2);
-        }}
-        
-        .search-box input::placeholder {{
-          color: #64748b;
-        }}
-        
-        .search-box button {{
-          padding: 10px 16px;
-          border-radius: 8px;
-          border: 1px solid rgba(96, 165, 250, 0.3);
-          background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
-          color: #60a5fa;
-          cursor: pointer;
-          font-weight: 500;
-          font-size: 13px;
-          transition: all 0.3s ease;
-        }}
-        
-        .search-box button:hover {{
-          background: linear-gradient(135deg, rgba(96, 165, 250, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
-          border-color: rgba(96, 165, 250, 0.4);
-        }}
-        
-        .controls-group {{
-          display: flex;
           gap: 20px;
-          align-items: center;
-          flex-wrap: wrap;
+          margin-bottom: 24px;
+          padding: 0;
         }}
         
-        .filter-section {{
+        .controls-left {{
+          flex: 1;
+          display: flex;
+          gap: 12px;
+        }}
+        
+        .search-form {{
           display: flex;
           gap: 10px;
           align-items: center;
+          flex: 1;
+          max-width: 420px;
         }}
         
-        .filter-label {{
-          font-size: 13px;
-          color: #94a3b8;
-          font-weight: 500;
-        }}
-        
-        .filters {{
+        .search-input-wrapper {{
           display: flex;
-          gap: 6px;
+          align-items: center;
+          gap: 10px;
+          flex: 1;
+          background: rgba(17, 24, 39, 0.6);
+          border: 1px solid rgba(96, 165, 250, 0.15);
+          border-radius: 8px;
+          padding: 10px 12px;
+          transition: all 0.3s ease;
         }}
         
-        .filter-btn {{
+        .search-input-wrapper:focus-within {{
+          border-color: rgba(96, 165, 250, 0.3);
+          background: rgba(17, 24, 39, 0.8);
+          box-shadow: 0 0 12px rgba(96, 165, 250, 0.15);
+        }}
+        
+        .search-icon {{
+          width: 16px;
+          height: 16px;
+          color: #94a3b8;
+          flex-shrink: 0;
+        }}
+        
+        .search-input-wrapper input {{
+          flex: 1;
+          background: transparent;
+          border: none;
+          color: #e5e7eb;
+          outline: none;
+          font-size: 13px;
+        }}
+        
+        .search-input-wrapper input::placeholder {{
+          color: #64748b;
+        }}
+        
+        .search-form button {{
+          padding: 10px 16px;
+          border-radius: 8px;
+          border: 1px solid rgba(96, 165, 250, 0.2);
+          background: rgba(96, 165, 250, 0.08);
+          color: #60a5fa;
+          font-weight: 500;
+          font-size: 13px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }}
+        
+        .search-form button:hover {{
+          border-color: rgba(96, 165, 250, 0.4);
+          background: rgba(96, 165, 250, 0.12);
+          color: #93c5fd;
+        }}
+        
+        .controls-right {{
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }}
+        
+        .filter-group {{
+          display: flex;
+          align-items: center;
+        }}
+        
+        .filters-list {{
+          display: flex;
+          gap: 8px;
+        }}
+        
+        .filter-tag {{
           font-size: 13px;
           padding: 8px 12px;
           border-radius: 6px;
@@ -693,32 +701,28 @@ def index():
           text-decoration: none;
           transition: all 0.3s ease;
           cursor: pointer;
+          background: transparent;
         }}
         
-        .filter-btn:hover {{
+        .filter-tag:hover {{
           border-color: rgba(96, 165, 250, 0.3);
-          background: rgba(96, 165, 250, 0.05);
           color: #60a5fa;
+          background: rgba(96, 165, 250, 0.05);
         }}
         
-        .filter-btn.active {{
-          background: linear-gradient(135deg, rgba(6, 182, 212, 0.3) 0%, rgba(96, 165, 250, 0.2) 100%);
-          border-color: rgba(96, 165, 250, 0.4);
+        .filter-tag.active {{
+          background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(96, 165, 250, 0.15) 100%);
+          border-color: rgba(96, 165, 250, 0.3);
           color: #60a5fa;
           font-weight: 500;
         }}
         
-        .actions {{
-          display: flex;
-          gap: 8px;
-        }}
-        
-        .btn-primary {{
+        .btn-manage {{
           display: inline-flex;
           align-items: center;
           gap: 6px;
           font-size: 13px;
-          padding: 10px 14px;
+          padding: 10px 16px;
           border-radius: 8px;
           border: 1px solid transparent;
           background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
@@ -727,12 +731,27 @@ def index():
           font-weight: 500;
           cursor: pointer;
           transition: all 0.3s ease;
-          box-shadow: 0 4px 12px rgba(6, 181, 212, 0.3);
+          box-shadow: 0 4px 12px rgba(6, 181, 212, 0.25);
+          white-space: nowrap;
         }}
         
-        .btn-primary:hover {{
-          box-shadow: 0 6px 20px rgba(6, 181, 212, 0.4);
-          transform: translateY(-2px);
+        .btn-manage:hover {{
+          box-shadow: 0 6px 20px rgba(6, 181, 212, 0.35);
+          transform: translateY(-1px);
+        }}
+        
+        @media (max-width: 768px) {{
+          .controls-bar {{
+            flex-direction: column;
+            gap: 12px;
+          }}
+          .controls-left {{
+            width: 100%;
+          }}
+          .controls-right {{
+            width: 100%;
+            justify-content: space-between;
+          }}
         }}
         .grid {{
           display: grid;
@@ -825,28 +844,30 @@ def index():
             最后刷新：{last_utc8}
           </div>
 
-          <div class="top-bar">
-            <div class="search-wrapper">
-              <form class="search-box" method="GET" action="/">
+          <div class="controls-bar">
+            <div class="controls-left">
+              <form class="search-form" method="GET" action="/">
                 <input type="hidden" name="pwd" value="{pwd}">
-                <input type="text" name="q" placeholder="🔍 搜索项目…" value="{q}">
+                <div class="search-input-wrapper">
+                  <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                  </svg>
+                  <input type="text" name="q" placeholder="搜索项目…" value="{q}">
+                </div>
                 <button type="submit">搜索</button>
               </form>
             </div>
 
-            <div class="controls-group">
-              <div class="filter-section">
-                <span class="filter-label">分类：</span>
-                <div class="filters">
-                  <a href="/?pwd={pwd}&cat=all" class="filter-btn {active_all}">全部</a>
-                  <a href="/?pwd={pwd}&cat=custom" class="filter-btn {active_custom}">自定义</a>
-                  <a href="/?pwd={pwd}&cat=trending" class="filter-btn {active_trending}">热度Top</a>
+            <div class="controls-right">
+              <div class="filter-group">
+                <div class="filters-list">
+                  <a href="/?pwd={pwd}&cat=all" class="filter-tag {active_all}">全部</a>
+                  <a href="/?pwd={pwd}&cat=custom" class="filter-tag {active_custom}">自定义</a>
+                  <a href="/?pwd={pwd}&cat=trending" class="filter-tag {active_trending}">热度Top</a>
                 </div>
               </div>
-
-              <div class="actions">
-                <a href="/manage?pwd={pwd}" class="btn-primary">⚙️ 项目管理</a>
-              </div>
+              <a href="/manage?pwd={pwd}" class="btn-manage">项目管理</a>
             </div>
           </div>
 
@@ -2382,94 +2403,102 @@ def index_v4():
           color: #9ca3af;
           margin-bottom: 14px;
         }}
-        .top-bar {{
+        .controls-bar {{
           display: flex;
-          flex-direction: column;
-          gap: 16px;
-          margin-bottom: 20px;
-          padding: 16px 20px;
-          background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(2, 6, 23, 0.8) 100%);
-          border: 1px solid rgba(96, 165, 250, 0.1);
-          border-radius: 12px;
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-          backdrop-filter: blur(10px);
-        }}
-        
-        .search-wrapper {{
-          flex: 1;
-          max-width: 400px;
-        }}
-        
-        .search-box {{
-          display: flex;
-          gap: 8px;
+          justify-content: space-between;
           align-items: center;
-        }}
-        
-        .search-box input {{
-          flex: 1;
-          background: rgba(17, 24, 39, 0.8);
-          border-radius: 8px;
-          border: 1px solid rgba(96, 165, 250, 0.2);
-          padding: 10px 14px;
-          color: #e5e7eb;
-          outline: none;
-          font-size: 13px;
-          transition: all 0.3s ease;
-        }}
-        
-        .search-box input:focus {{
-          border-color: rgba(96, 165, 250, 0.4);
-          background: rgba(17, 24, 39, 1);
-          box-shadow: 0 0 12px rgba(96, 165, 250, 0.2);
-        }}
-        
-        .search-box input::placeholder {{
-          color: #64748b;
-        }}
-        
-        .search-box button {{
-          padding: 10px 16px;
-          border-radius: 8px;
-          border: 1px solid rgba(96, 165, 250, 0.3);
-          background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
-          color: #60a5fa;
-          cursor: pointer;
-          font-weight: 500;
-          font-size: 13px;
-          transition: all 0.3s ease;
-        }}
-        
-        .search-box button:hover {{
-          background: linear-gradient(135deg, rgba(96, 165, 250, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
-          border-color: rgba(96, 165, 250, 0.4);
-        }}
-        
-        .controls-group {{
-          display: flex;
           gap: 20px;
-          align-items: center;
-          flex-wrap: wrap;
+          margin-bottom: 24px;
+          padding: 0;
         }}
         
-        .filter-section {{
+        .controls-left {{
+          flex: 1;
+          display: flex;
+          gap: 12px;
+        }}
+        
+        .search-form {{
           display: flex;
           gap: 10px;
           align-items: center;
+          flex: 1;
+          max-width: 420px;
         }}
         
-        .filter-label {{
-          font-size: 13px;
-          color: #94a3b8;
-          font-weight: 500;
-        }}
-        
-        .filters {{
+        .search-input-wrapper {{
           display: flex;
-          gap: 6px;
+          align-items: center;
+          gap: 10px;
+          flex: 1;
+          background: rgba(17, 24, 39, 0.6);
+          border: 1px solid rgba(96, 165, 250, 0.15);
+          border-radius: 8px;
+          padding: 10px 12px;
+          transition: all 0.3s ease;
         }}
         
-        .filter-btn {{
+        .search-input-wrapper:focus-within {{
+          border-color: rgba(96, 165, 250, 0.3);
+          background: rgba(17, 24, 39, 0.8);
+          box-shadow: 0 0 12px rgba(96, 165, 250, 0.15);
+        }}
+        
+        .search-icon {{
+          width: 16px;
+          height: 16px;
+          color: #94a3b8;
+          flex-shrink: 0;
+        }}
+        
+        .search-input-wrapper input {{
+          flex: 1;
+          background: transparent;
+          border: none;
+          color: #e5e7eb;
+          outline: none;
+          font-size: 13px;
+        }}
+        
+        .search-input-wrapper input::placeholder {{
+          color: #64748b;
+        }}
+        
+        .search-form button {{
+          padding: 10px 16px;
+          border-radius: 8px;
+          border: 1px solid rgba(96, 165, 250, 0.2);
+          background: rgba(96, 165, 250, 0.08);
+          color: #60a5fa;
+          font-weight: 500;
+          font-size: 13px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }}
+        
+        .search-form button:hover {{
+          border-color: rgba(96, 165, 250, 0.4);
+          background: rgba(96, 165, 250, 0.12);
+          color: #93c5fd;
+        }}
+        
+        .controls-right {{
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }}
+        
+        .filter-group {{
+          display: flex;
+          align-items: center;
+        }}
+        
+        .filters-list {{
+          display: flex;
+          gap: 8px;
+        }}
+        
+        .filter-tag {{
           font-size: 13px;
           padding: 8px 12px;
           border-radius: 6px;
@@ -2478,32 +2507,28 @@ def index_v4():
           text-decoration: none;
           transition: all 0.3s ease;
           cursor: pointer;
+          background: transparent;
         }}
         
-        .filter-btn:hover {{
+        .filter-tag:hover {{
           border-color: rgba(96, 165, 250, 0.3);
-          background: rgba(96, 165, 250, 0.05);
           color: #60a5fa;
+          background: rgba(96, 165, 250, 0.05);
         }}
         
-        .filter-btn.active {{
-          background: linear-gradient(135deg, rgba(6, 182, 212, 0.3) 0%, rgba(96, 165, 250, 0.2) 100%);
-          border-color: rgba(96, 165, 250, 0.4);
+        .filter-tag.active {{
+          background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(96, 165, 250, 0.15) 100%);
+          border-color: rgba(96, 165, 250, 0.3);
           color: #60a5fa;
           font-weight: 500;
         }}
         
-        .actions {{
-          display: flex;
-          gap: 8px;
-        }}
-        
-        .btn-primary {{
+        .btn-manage {{
           display: inline-flex;
           align-items: center;
           gap: 6px;
           font-size: 13px;
-          padding: 10px 14px;
+          padding: 10px 16px;
           border-radius: 8px;
           border: 1px solid transparent;
           background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
@@ -2512,12 +2537,27 @@ def index_v4():
           font-weight: 500;
           cursor: pointer;
           transition: all 0.3s ease;
-          box-shadow: 0 4px 12px rgba(6, 181, 212, 0.3);
+          box-shadow: 0 4px 12px rgba(6, 181, 212, 0.25);
+          white-space: nowrap;
         }}
         
-        .btn-primary:hover {{
-          box-shadow: 0 6px 20px rgba(6, 181, 212, 0.4);
-          transform: translateY(-2px);
+        .btn-manage:hover {{
+          box-shadow: 0 6px 20px rgba(6, 181, 212, 0.35);
+          transform: translateY(-1px);
+        }}
+        
+        @media (max-width: 768px) {{
+          .controls-bar {{
+            flex-direction: column;
+            gap: 12px;
+          }}
+          .controls-left {{
+            width: 100%;
+          }}
+          .controls-right {{
+            width: 100%;
+            justify-content: space-between;
+          }}
         }}
         .grid {{
           display: grid;
