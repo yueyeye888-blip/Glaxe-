@@ -836,13 +836,28 @@ def manage():
           font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
         }}
         .shell {{
-          min-height:100vh;
-          background: radial-gradient(circle at top left,#0b1120 0,#020617 45%);
+          min-height: 100vh;
+          background: radial-gradient(circle at top right, #0f172a 0%, #020617 40%, #000 100%);
+          position: relative;
+        }}
+        
+        .shell::before {{
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+          pointer-events: none;
+          z-index: 0;
         }}
         .container {{
           max-width: 960px;
           margin: 0 auto;
           padding: 20px 16px 40px;
+          position: relative;
+          z-index: 1;
         }}
         .top-nav {{
           display:flex;
@@ -881,12 +896,20 @@ def manage():
         a {{ color:#60a5fa; text-decoration:none; }}
         a:hover {{ text-decoration:underline; }}
         .card {{
-          background: radial-gradient(circle at top left,#111827 0,#020617 55%);
-          border-radius: 14px;
-          border: 1px solid #111827;
+          background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(2, 6, 23, 0.95) 100%);
+          border-radius: 12px;
+          border: 1px solid rgba(96, 165, 250, 0.1);
           padding: 14px 16px 16px;
-          box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(96, 165, 250, 0.1);
           margin-bottom: 14px;
+          transition: all 0.3s ease;
+          backdrop-filter: blur(10px);
+        }}
+        
+        .card:hover {{
+          border-color: rgba(96, 165, 250, 0.2);
+          box-shadow: 0 12px 40px rgba(6, 182, 212, 0.15), inset 0 1px 0 rgba(96, 165, 250, 0.15);
+          transform: translateY(-2px);
         }}
         .card-header {{
           display:flex;
@@ -2800,31 +2823,41 @@ def index_v4():
 
           <div class="app-header">
             <div class="app-brand">
-              <div class="app-logo"><span>NTX</span></div>
-              <div>
-                <div class="app-title-row">
-                  <span class="app-title">NTX Quest Radar</span>
-                  <span class="app-version">OpenAPI · V4.0</span>
-                </div>
-                <div class="app-subline">
-                  <span class="app-badge green">公开 API 模式</span>
-                  <span class="app-badge outline">不依赖 Space Owner 权限</span>
+              <div class="app-logo-wrapper">
+                <div class="app-logo"><span>◆</span></div>
+                <div>
+                  <div class="app-title-row">
+                    <span class="app-title">NTX Quest Radar</span>
+                    <span class="app-version">v4.0</span>
+                  </div>
+                  <div class="app-subline">Quest Monitoring Platform</div>
                 </div>
               </div>
             </div>
-            <div class="app-meta">
-              <div class="app-meta-row">
-                <span class="dot green"></span>运行正常
+            <div class="app-status-section">
+              <div class="status-indicator">
+                <div class="status-badge online">
+                  <span class="status-dot"></span>
+                  <span class="status-text">运行正常</span>
+                </div>
+                <div class="status-info">
+                  <div class="info-item">
+                    <span class="info-label">最后刷新</span>
+                    <span class="info-value">{last_utc8}</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">访问密钥</span>
+                    <code class="key-display">{pwd}</code>
+                  </div>
+                </div>
               </div>
-              <div class="app-meta-row">
-                最后刷新：{last_utc8}
-              </div>
-              <div class="app-meta-row">
-                登录密码：<code>{pwd}</code>
-              </div>
-              <div class="app-nav-links">
-                <a href="/v4?pwd={pwd}" class="active">活动监控</a>
-                <a href="/manage?pwd={pwd}" target="_blank">项目管理</a>
+              <div class="nav-tabs">
+                <a href="/v4?pwd={pwd}" class="nav-tab">
+                  <span class="tab-icon">📊</span>活动监控
+                </a>
+                <a href="/manage?pwd={pwd}" class="nav-tab active">
+                  <span class="tab-icon">⚙️</span>项目管理
+                </a>
               </div>
             </div>
           </div>
