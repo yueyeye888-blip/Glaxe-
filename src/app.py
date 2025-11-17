@@ -599,67 +599,140 @@ def index():
         }}
         .top-bar {{
           display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
+          flex-direction: column;
+          gap: 16px;
+          margin-bottom: 20px;
+          padding: 16px 20px;
+          background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(2, 6, 23, 0.8) 100%);
+          border: 1px solid rgba(96, 165, 250, 0.1);
+          border-radius: 12px;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+          backdrop-filter: blur(10px);
+        }}
+        
+        .search-wrapper {{
+          flex: 1;
+          max-width: 400px;
+        }}
+        
+        .search-box {{
+          display: flex;
+          gap: 8px;
           align-items: center;
-          margin-bottom: 16px;
         }}
-        .pill-info {{
-          border-radius: 999px;
-          padding: 4px 12px;
-          font-size: 12px;
-          border: 1px solid #1f2937;
-          background:#020617;
-          color:#9ca3af;
-        }}
-        .pill-info strong {{
-          color:#e5e7eb;
-        }}
+        
         .search-box input {{
-          background: #020617;
-          border-radius: 999px;
-          border: 1px solid #1f2937;
-          padding: 6px 12px;
+          flex: 1;
+          background: rgba(17, 24, 39, 0.8);
+          border-radius: 8px;
+          border: 1px solid rgba(96, 165, 250, 0.2);
+          padding: 10px 14px;
           color: #e5e7eb;
           outline: none;
-          min-width: 180px;
+          font-size: 13px;
+          transition: all 0.3s ease;
         }}
+        
+        .search-box input:focus {{
+          border-color: rgba(96, 165, 250, 0.4);
+          background: rgba(17, 24, 39, 1);
+          box-shadow: 0 0 12px rgba(96, 165, 250, 0.2);
+        }}
+        
+        .search-box input::placeholder {{
+          color: #64748b;
+        }}
+        
         .search-box button {{
-          margin-left: 6px;
-          border-radius: 999px;
-          border: 1px solid #374151;
-          background: #111827;
-          color: #e5e7eb;
-          padding: 6px 12px;
+          padding: 10px 16px;
+          border-radius: 8px;
+          border: 1px solid rgba(96, 165, 250, 0.3);
+          background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+          color: #60a5fa;
+          cursor: pointer;
+          font-weight: 500;
+          font-size: 13px;
+          transition: all 0.3s ease;
+        }}
+        
+        .search-box button:hover {{
+          background: linear-gradient(135deg, rgba(96, 165, 250, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+          border-color: rgba(96, 165, 250, 0.4);
+        }}
+        
+        .controls-group {{
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          flex-wrap: wrap;
+        }}
+        
+        .filter-section {{
+          display: flex;
+          gap: 10px;
+          align-items: center;
+        }}
+        
+        .filter-label {{
+          font-size: 13px;
+          color: #94a3b8;
+          font-weight: 500;
+        }}
+        
+        .filters {{
+          display: flex;
+          gap: 6px;
+        }}
+        
+        .filter-btn {{
+          font-size: 13px;
+          padding: 8px 12px;
+          border-radius: 6px;
+          border: 1px solid rgba(96, 165, 250, 0.2);
+          color: #94a3b8;
+          text-decoration: none;
+          transition: all 0.3s ease;
           cursor: pointer;
         }}
-        .filters a {{
+        
+        .filter-btn:hover {{
+          border-color: rgba(96, 165, 250, 0.3);
+          background: rgba(96, 165, 250, 0.05);
+          color: #60a5fa;
+        }}
+        
+        .filter-btn.active {{
+          background: linear-gradient(135deg, rgba(6, 182, 212, 0.3) 0%, rgba(96, 165, 250, 0.2) 100%);
+          border-color: rgba(96, 165, 250, 0.4);
+          color: #60a5fa;
+          font-weight: 500;
+        }}
+        
+        .actions {{
+          display: flex;
+          gap: 8px;
+        }}
+        
+        .btn-primary {{
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
           font-size: 13px;
-          padding: 4px 10px;
-          border-radius: 999px;
-          border: 1px solid #1f2937;
-          color: #9ca3af;
+          padding: 10px 14px;
+          border-radius: 8px;
+          border: 1px solid transparent;
+          background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+          color: #fff;
           text-decoration: none;
-          margin-right: 6px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 12px rgba(6, 181, 212, 0.3);
         }}
-        .filters a.active {{
-          background: #2563eb;
-          border-color: #2563eb;
-          color: #e5e7eb;
-        }}
-        .actions a {{
-          font-size: 12px;
-          padding: 5px 10px;
-          border-radius: 999px;
-          border: 1px solid #4b5563;
-          color: #e5e7eb;
-          text-decoration: none;
-        }}
-        .actions a.primary {{
-          background:#10b981;
-          border-color:#10b981;
-          color:#022c22;
-          font-weight:600;
+        
+        .btn-primary:hover {{
+          box-shadow: 0 6px 20px rgba(6, 181, 212, 0.4);
+          transform: translateY(-2px);
         }}
         .grid {{
           display: grid;
@@ -753,22 +826,27 @@ def index():
           </div>
 
           <div class="top-bar">
-            <div class="pill-info">登录密码：<strong>{pwd}</strong></div>
-
-            <form class="search-box" method="GET" action="/">
-              <input type="hidden" name="pwd" value="{pwd}">
-              <input type="text" name="q" placeholder="搜索 Space 名称或 alias…" value="{q}">
-              <button type="submit">搜索</button>
-            </form>
-
-            <div class="filters">
-              <a href="/?pwd={pwd}&cat=all" class="{active_all}">全部</a>
-              <a href="/?pwd={pwd}&cat=custom" class="{active_custom}">自定义</a>
-              <a href="/?pwd={pwd}&cat=trending" class="{active_trending}">热度Top</a>
+            <div class="search-wrapper">
+              <form class="search-box" method="GET" action="/">
+                <input type="hidden" name="pwd" value="{pwd}">
+                <input type="text" name="q" placeholder="🔍 搜索项目…" value="{q}">
+                <button type="submit">搜索</button>
+              </form>
             </div>
 
-            <div class="actions">
-              <a href="/manage?pwd={pwd}" class="primary">项目管理</a>
+            <div class="controls-group">
+              <div class="filter-section">
+                <span class="filter-label">分类：</span>
+                <div class="filters">
+                  <a href="/?pwd={pwd}&cat=all" class="filter-btn {active_all}">全部</a>
+                  <a href="/?pwd={pwd}&cat=custom" class="filter-btn {active_custom}">自定义</a>
+                  <a href="/?pwd={pwd}&cat=trending" class="filter-btn {active_trending}">热度Top</a>
+                </div>
+              </div>
+
+              <div class="actions">
+                <a href="/manage?pwd={pwd}" class="btn-primary">⚙️ 项目管理</a>
+              </div>
             </div>
           </div>
 
@@ -2306,67 +2384,140 @@ def index_v4():
         }}
         .top-bar {{
           display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
+          flex-direction: column;
+          gap: 16px;
+          margin-bottom: 20px;
+          padding: 16px 20px;
+          background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(2, 6, 23, 0.8) 100%);
+          border: 1px solid rgba(96, 165, 250, 0.1);
+          border-radius: 12px;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+          backdrop-filter: blur(10px);
+        }}
+        
+        .search-wrapper {{
+          flex: 1;
+          max-width: 400px;
+        }}
+        
+        .search-box {{
+          display: flex;
+          gap: 8px;
           align-items: center;
-          margin-bottom: 16px;
         }}
-        .pill-info {{
-          border-radius: 999px;
-          padding: 4px 12px;
-          font-size: 12px;
-          border: 1px solid #1f2937;
-          background:#020617;
-          color:#9ca3af;
-        }}
-        .pill-info strong {{
-          color:#e5e7eb;
-        }}
+        
         .search-box input {{
-          background: #020617;
-          border-radius: 999px;
-          border: 1px solid #1f2937;
-          padding: 6px 12px;
+          flex: 1;
+          background: rgba(17, 24, 39, 0.8);
+          border-radius: 8px;
+          border: 1px solid rgba(96, 165, 250, 0.2);
+          padding: 10px 14px;
           color: #e5e7eb;
           outline: none;
-          min-width: 180px;
+          font-size: 13px;
+          transition: all 0.3s ease;
         }}
+        
+        .search-box input:focus {{
+          border-color: rgba(96, 165, 250, 0.4);
+          background: rgba(17, 24, 39, 1);
+          box-shadow: 0 0 12px rgba(96, 165, 250, 0.2);
+        }}
+        
+        .search-box input::placeholder {{
+          color: #64748b;
+        }}
+        
         .search-box button {{
-          margin-left: 6px;
-          border-radius: 999px;
-          border: 1px solid #374151;
-          background: #111827;
-          color: #e5e7eb;
-          padding: 6px 12px;
+          padding: 10px 16px;
+          border-radius: 8px;
+          border: 1px solid rgba(96, 165, 250, 0.3);
+          background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+          color: #60a5fa;
+          cursor: pointer;
+          font-weight: 500;
+          font-size: 13px;
+          transition: all 0.3s ease;
+        }}
+        
+        .search-box button:hover {{
+          background: linear-gradient(135deg, rgba(96, 165, 250, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+          border-color: rgba(96, 165, 250, 0.4);
+        }}
+        
+        .controls-group {{
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          flex-wrap: wrap;
+        }}
+        
+        .filter-section {{
+          display: flex;
+          gap: 10px;
+          align-items: center;
+        }}
+        
+        .filter-label {{
+          font-size: 13px;
+          color: #94a3b8;
+          font-weight: 500;
+        }}
+        
+        .filters {{
+          display: flex;
+          gap: 6px;
+        }}
+        
+        .filter-btn {{
+          font-size: 13px;
+          padding: 8px 12px;
+          border-radius: 6px;
+          border: 1px solid rgba(96, 165, 250, 0.2);
+          color: #94a3b8;
+          text-decoration: none;
+          transition: all 0.3s ease;
           cursor: pointer;
         }}
-        .filters a {{
+        
+        .filter-btn:hover {{
+          border-color: rgba(96, 165, 250, 0.3);
+          background: rgba(96, 165, 250, 0.05);
+          color: #60a5fa;
+        }}
+        
+        .filter-btn.active {{
+          background: linear-gradient(135deg, rgba(6, 182, 212, 0.3) 0%, rgba(96, 165, 250, 0.2) 100%);
+          border-color: rgba(96, 165, 250, 0.4);
+          color: #60a5fa;
+          font-weight: 500;
+        }}
+        
+        .actions {{
+          display: flex;
+          gap: 8px;
+        }}
+        
+        .btn-primary {{
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
           font-size: 13px;
-          padding: 4px 10px;
-          border-radius: 999px;
-          border: 1px solid #1f2937;
-          color: #9ca3af;
+          padding: 10px 14px;
+          border-radius: 8px;
+          border: 1px solid transparent;
+          background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
+          color: #fff;
           text-decoration: none;
-          margin-right: 6px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 12px rgba(6, 181, 212, 0.3);
         }}
-        .filters a.active {{
-          background: #2563eb;
-          border-color: #2563eb;
-          color: #e5e7eb;
-        }}
-        .actions a {{
-          font-size: 12px;
-          padding: 5px 10px;
-          border-radius: 999px;
-          border: 1px solid #4b5563;
-          color: #e5e7eb;
-          text-decoration: none;
-        }}
-        .actions a.primary {{
-          background:#10b981;
-          border-color:#10b981;
-          color:#022c22;
-          font-weight:600;
+        
+        .btn-primary:hover {{
+          box-shadow: 0 6px 20px rgba(6, 181, 212, 0.4);
+          transform: translateY(-2px);
         }}
         .grid {{
           display: grid;
@@ -2460,8 +2611,6 @@ def index_v4():
           </div>
 
           <div class="top-bar">
-            <div class="pill-info">登录密码：<strong>{pwd}</strong></div>
-
             <form class="search-box" method="GET" action="/v4">
               <input type="hidden" name="pwd" value="{pwd}">
               <input type="text" name="q" placeholder="搜索 Space 名称或 alias…" value="{q}">
