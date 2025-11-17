@@ -1,0 +1,11 @@
+*** a/combined_app.py
+--- b/combined_app.py
+@@ -612,10 +612,6 @@ def build_html(projects):
+             card += f"<li><b>活动标题：</b>{latest['title']}</li>"
+ 
+-        # 删除创建时间行
+-        # card += f"<li><b>创建时间：</b>{latest.get('createdAt', '-') }</li>"
+-
+         if latest.get("startTime"):
+             card += f"<li><b>开始时间：</b>{latest['startTime']}</li>"
+ 

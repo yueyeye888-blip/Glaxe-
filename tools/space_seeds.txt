@@ -1,0 +1,9 @@
+# 每行写一个 Space 别名或完整链接，# 开头的是注释
+
+SpaceandTimeDB
+Optimism
+zkSync
+
+# 也可以直接贴链接，脚本会自动提取别名:
+https://app.galxe.com/quest/SpaceandTimeDB/GCxwBtKJXi
+https://app.galxe.com/quest/Linea/GCtq1XzVfY

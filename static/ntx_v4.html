@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>NTX QUEST RADAR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #050816;
+      --card-bg: #0b1020;
+      --accent: #31d0ff;
+      --text-main: #f3f4f6;
+      --text-sub: #9ca3af;
+      --danger: #f97373;
+      --border: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system,BlinkMacSystemFont,system-ui,"Segoe UI",sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 60%);
+      color: var(--text-main);
+    }
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 16px 40px;
+    }
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .title-block h1 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 0.08em;
+    }
+    .title-block p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+    .status-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid var(--border);
+      background: rgba(15,23,42,.8);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--danger);
+    }
+    .dot.ok {
+      background: #22c55e;
+    }
+    .pill strong { font-weight: 600; }
+    .pill span.small {
+      font-size: 11px;
+      color: var(--text-sub);
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .toolbar-left {
+      display: flex;
+      flex: 1;
+      min-width: 220px;
+      gap: 8px;
+    }
+    .search-box {
+      position: relative;
+      flex: 1;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 8px 10px 8px 26px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(15,23,42,.9);
+      color: var(--text-main);
+      font-size: 13px;
+      outline: none;
+    }
+    .search-box input::placeholder {
+      color: #6b7280;
+    }
+    .search-icon {
+      position: absolute;
+      left: 9px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 11px;
+      color: #6b7280;
+    }
+    .btn {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(15,23,42,.9);
+      color: var(--text-main);
+      font-size: 12px;
+      padding: 7px 12px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .btn.primary {
+      border-color: var(--accent);
+      background: linear-gradient(135deg,#0ea5e9,#6366f1);
+    }
+    .btn:active { transform: scale(0.97); }
+
+    .summary-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-bottom: 12px;
+    }
+    .summary-line span.label {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+      gap: 10px;
+    }
+    .card {
+      background: radial-gradient(circle at top,#111827 0,#020617 80%);
+      border-radius: 14px;
+      border: 1px solid rgba(31,41,55,.9);
+      padding: 10px 11px 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 8px 20px rgba(15,23,42,.8);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      align-items: baseline;
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .card-alias {
+      font-size: 11px;
+      color: var(--text-sub);
+    }
+    .tag {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(55,65,81,.9);
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .card-body {
+      font-size: 12px;
+      color: var(--text-sub);
+      line-height: 1.5;
+    }
+    .card-body .label {
+      color: var(--text-main);
+      font-weight: 500;
+      font-size: 11px;
+    }
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+      gap: 6px;
+    }
+    .time-block {
+      font-size: 11px;
+      color: var(--text-sub);
+      line-height: 1.4;
+    }
+    .link {
+      font-size: 11px;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(56,189,248,.5);
+      padding-bottom: 1px;
+    }
+    .link:hover {
+      opacity: .85;
+    }
+    .empty-tip {
+      font-size: 13px;
+      color: var(--text-sub);
+      padding: 20px 8px;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .header { align-items: flex-start; }
+      .status-block { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header class="header">
+    <div class="title-block">
+      <h1>NTX QUEST RADAR</h1>
+      <p>Galxe 空投项目集中监控 · Powered by NTX</p>
+    </div>
+    <div class="status-block">
+      <div class="pill" id="status-pill">
+        <span class="dot" id="status-dot"></span>
+        <span id="status-text">离线</span>
+      </div>
+      <div class="pill">
+        <span class="small">最近刷新：</span>
+        <strong id="status-last">—</strong>
+      </div>
+      <div class="pill">
+        <span class="small">项目数量：</span>
+        <strong id="status-count">—</strong>
+      </div>
+    </div>
+  </header>
+
+  <section class="toolbar">
+    <div class="toolbar-left">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input id="search-input" placeholder="搜索项目名 / alias / 活动标题…" />
+      </div>
+    </div>
+    <div class="toolbar-right">
+      <button class="btn" id="btn-refresh">手动刷新</button>
+    </div>
+  </section>
+
+  <div class="summary-line">
+    <span class="label">提示：</span>
+    <span>数据来自后端接口 <code>/?raw=1&pwd=admin</code>，如需改密码，请同步调整后端 <code>config.json</code> 和本页脚本中的 <code>PWD</code>。</span>
+  </div>
+
+  <main id="cards" class="grid">
+    <!-- cards render here -->
+  </main>
+
+  <div id="empty-tip" class="empty-tip" style="display:none;">
+    当前没有项目，或者所有项目都被筛选器过滤掉了。
+  </div>
+</div>
+
+<script>
+  const PWD = "admin"; // 与后端 config.json 的 webui_password 保持一致
+  const API_URL = "/?raw=1&pwd=" + encodeURIComponent(PWD);
+
+  let fullData = { projects: [], last_loop: null };
+
+  function fmtTime(t) {
+    if (!t) return "—";
+    try {
+      // 兼容 ISO 字符串
+      return new Date(t).toLocaleString();
+    } catch (e) {
+      return t;
+    }
+  }
+
+  function normalizeProjects(raw) {
+    if (!raw || !Array.isArray(raw.projects)) return [];
+    return raw.projects.map((p) => {
+      const latest = p.latest || {};
+      return {
+        name: p.name || "",
+        alias: p.alias || p.space_id || "",
+        title: latest.title || "",
+        url: latest.url || "",
+        createdAt: latest.createdAt || latest.created_at || null,
+        startTime: latest.startTime || latest.start_time || null,
+        endTime: latest.endTime || latest.end_time || null,
+      };
+    });
+  }
+
+  function render() {
+    const cards = document.getElementById("cards");
+    const emptyTip = document.getElementById("empty-tip");
+    const search = document.getElementById("search-input").value.trim().toLowerCase();
+
+    const projects = normalizeProjects(fullData);
+
+    const filtered = projects.filter((p) => {
+      if (!search) return true;
+      const txt = (p.name + " " + p.alias + " " + p.title).toLowerCase();
+      return txt.includes(search);
+    });
+
+    cards.innerHTML = "";
+
+    document.getElementById("status-count").textContent = filtered.length.toString();
+
+    if (!filtered.length) {
+      emptyTip.style.display = "block";
+      return;
+    } else {
+      emptyTip.style.display = "none";
+    }
+
+    for (const p of filtered) {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      const header = document.createElement("div");
+      header.className = "card-header";
+
+      const titleWrap = document.createElement("div");
+      const title = document.createElement("div");
+      title.className = "card-title";
+      title.textContent = p.name || "(未命名 Space)";
+      const alias = document.createElement("div");
+      alias.className = "card-alias";
+      alias.textContent = p.alias ? "alias: " + p.alias : "alias: —";
+      titleWrap.appendChild(title);
+      titleWrap.appendChild(alias);
+
+      const tag = document.createElement("div");
+      tag.className = "tag";
+      tag.textContent = p.title ? "有活动" : "无活动";
+
+      header.appendChild(titleWrap);
+      header.appendChild(tag);
+
+      const body = document.createElement("div");
+      body.className = "card-body";
+      const titleLine = document.createElement("div");
+      titleLine.innerHTML =
+        '<span class="label">最新活动：</span>' +
+        (p.title || "<span style=\"color:#6b7280;\">暂无</span>");
+      body.appendChild(titleLine);
+
+      const footer = document.createElement("div");
+      footer.className = "card-footer";
+
+      const time = document.createElement("div");
+      time.className = "time-block";
+      time.innerHTML =
+        "开始：" + fmtTime(p.startTime) + "<br/>结束：" + fmtTime(p.endTime);
+
+      const linkWrap = document.createElement("div");
+      if (p.url) {
+        const a = document.createElement("a");
+        a.className = "link";
+        a.href = p.url;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.textContent = "打开活动";
+        linkWrap.appendChild(a);
+      } else {
+        linkWrap.innerHTML = '<span style="font-size:11px;color:#6b7280;">无有效链接</span>';
+      }
+
+      footer.appendChild(time);
+      footer.appendChild(linkWrap);
+
+      card.appendChild(header);
+      card.appendChild(body);
+      card.appendChild(footer);
+
+      cards.appendChild(card);
+    }
+  }
+
+  async function loadData(showStatus = true) {
+    const pill = document.getElementById("status-pill");
+    const dot = document.getElementById("status-dot");
+    const statusText = document.getElementById("status-text");
+    const lastEl = document.getElementById("status-last");
+
+    if (showStatus) {
+      statusText.textContent = "请求中…";
+      dot.classList.remove("ok");
+    }
+
+    try {
+      const resp = await fetch(API_URL, { cache: "no-store" });
+      if (!resp.ok) {
+        throw new Error("HTTP " + resp.status);
+      }
+      const data = await resp.json();
+      fullData = data || {};
+      const last = data.last_loop || null;
+
+      lastEl.textContent = last ? fmtTime(last) : "—";
+      statusText.textContent = "已连接";
+      dot.classList.add("ok");
+      render();
+    } catch (e) {
+      console.error(e);
+      statusText.textContent = "网络错误";
+      dot.classList.remove("ok");
+      lastEl.textContent = "—";
+      document.getElementById("cards").innerHTML = "";
+      const emptyTip = document.getElementById("empty-tip");
+      emptyTip.style.display = "block";
+      emptyTip.textContent =
+        "加载失败：" + e.toString() + "（请确认 /?raw=1&pwd=admin 可在浏览器中访问）";
+    }
+  }
+
+  document.getElementById("btn-refresh").addEventListener("click", () => loadData(true));
+  document.getElementById("search-input").addEventListener("input", () => render());
+
+  // 首次加载
+  loadData(false);

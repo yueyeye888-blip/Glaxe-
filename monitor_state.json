@@ -1,0 +1,2605 @@
+{
+  "last_loop": "2025-11-17T09:39:51.788245Z",
+  "projects": [
+    {
+      "name": "BNB Chain",
+      "alias": "bnbchain",
+      "category": "trending",
+      "latest": {
+        "id": "GCMpytz6ud",
+        "name": "一个活动",
+        "createdAt": "",
+        "startTime": 1715097600,
+        "endTime": 1715184000
+      },
+      "url": "https://app.galxe.com/quest/bnbchain/GCMpytz6ud"
+    },
+    {
+      "name": "Galxe Official",
+      "alias": "Galxe",
+      "category": "trending",
+      "latest": {
+        "id": "GCjg1t8ju3",
+        "name": "Galxe 'Starboard' Starboard Rewards - Top 200",
+        "createdAt": "",
+        "startTime": 1759248000,
+        "endTime": 1762725600
+      },
+      "url": "https://app.galxe.com/quest/Galxe/GCjg1t8ju3"
+    },
+    {
+      "name": "OKX Web3",
+      "alias": "okxweb3",
+      "category": "trending",
+      "latest": {
+        "id": "GCBU9twKuE",
+        "name": "Bonus: $1,000 Giveaway for 10 winners",
+        "createdAt": "",
+        "startTime": 1707148800,
+        "endTime": 1708358400
+      },
+      "url": "https://app.galxe.com/quest/okxweb3/GCBU9twKuE"
+    },
+    {
+      "name": "Zaiffer Quest",
+      "alias": "Zaiffer",
+      "category": "trending",
+      "latest": {
+        "id": "GC2YFt8niZ",
+        "name": "Understanding Zaïffer - Chapter 1",
+        "createdAt": "",
+        "startTime": 1762470000,
+        "endTime": 1763247600
+      },
+      "url": "https://app.galxe.com/quest/Zaiffer/GC2YFt8niZ"
+    },
+    {
+      "name": "Arbitrum",
+      "alias": "arbitrum",
+      "category": "trending",
+      "latest": {
+        "id": "GCR7Utgihj",
+        "name": "💧10,000 ARB in Native x Ether.fi & Solv Mission Voyage",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/arbitrum/GCR7Utgihj"
+    },
+    {
+      "name": "Optimism",
+      "alias": "optimism",
+      "category": "trending",
+      "latest": {
+        "id": "GC6NiUtWQn",
+        "name": "Uniswap Optimism Quest",
+        "createdAt": "",
+        "startTime": 1663693200,
+        "endTime": 1673974800
+      },
+      "url": "https://app.galxe.com/quest/optimism/GC6NiUtWQn"
+    },
+    {
+      "name": "Base",
+      "alias": "base",
+      "category": "trending",
+      "latest": {
+        "id": "GCzPMt42Xy",
+        "name": "Onchain Daily: \"Baker Grace\" 03/11",
+        "createdAt": "",
+        "startTime": 1710180000,
+        "endTime": 1713204000
+      },
+      "url": "https://app.galxe.com/quest/base/GCzPMt42Xy"
+    },
+    {
+      "name": "Linea",
+      "alias": "linea",
+      "category": "trending",
+      "latest": {
+        "id": "GCcr5UNjtY",
+        "name": "Linea Voyage - Show Your Knowledge of Linea and Earn Points! ",
+        "createdAt": "",
+        "startTime": 1686056400,
+        "endTime": 1686542399
+      },
+      "url": "https://app.galxe.com/quest/linea/GCcr5UNjtY"
+    },
+    {
+      "name": "zkSync",
+      "alias": "zksync",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Scroll",
+      "alias": "scroll",
+      "category": "trending",
+      "latest": {
+        "id": "GCg8WtvGMy",
+        "name": "Pencils Protocol - Free mint Soul NFT to receive airdrops",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/scroll/GCg8WtvGMy"
+    },
+    {
+      "name": "Taiko",
+      "alias": "taiko",
+      "category": "trending",
+      "latest": {
+        "id": "GCxLit6xKA",
+        "name": "Gems.Town",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/taiko/GCxLit6xKA"
+    },
+    {
+      "name": "Blast",
+      "alias": "blast",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Mantle",
+      "alias": "mantle",
+      "category": "trending",
+      "latest": {
+        "id": "GCR5mtd13P",
+        "name": "Vertex Dominion: Vertex X Mantle",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/mantle/GCR5mtd13P"
+    },
+    {
+      "name": "Starknet",
+      "alias": "starknet",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Polygon",
+      "alias": "polygon",
+      "category": "trending",
+      "latest": {
+        "id": "GCq8ht4Yud",
+        "name": "Tokenization Spotlight: Outsyde",
+        "createdAt": "",
+        "startTime": 1708984800,
+        "endTime": 1709589600
+      },
+      "url": "https://app.galxe.com/quest/polygon/GCq8ht4Yud"
+    },
+    {
+      "name": "Avalanche",
+      "alias": "avax",
+      "category": "trending",
+      "latest": {
+        "id": "GCn4Gt6hdY",
+        "name": "Kite AIR and Fundraise Announcement",
+        "createdAt": "",
+        "startTime": 1757304000,
+        "endTime": 1759118400
+      },
+      "url": "https://app.galxe.com/quest/avax/GCn4Gt6hdY"
+    },
+    {
+      "name": "Fantom",
+      "alias": "fantom",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "CoreDAO",
+      "alias": "coredao",
+      "category": "trending",
+      "latest": {
+        "id": "GCWDrtgGLd",
+        "name": "3700 $BTC Staked on Core Celebration",
+        "createdAt": "",
+        "startTime": 1719928800,
+        "endTime": 1722441540
+      },
+      "url": "https://app.galxe.com/quest/coredao/GCWDrtgGLd"
+    },
+    {
+      "name": "Merlin Chain",
+      "alias": "merlin",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Manta Network",
+      "alias": "manta",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Zircuit",
+      "alias": "zircuit",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Mode Network",
+      "alias": "mode",
+      "category": "trending",
+      "latest": {
+        "id": "GCoiTt4R28",
+        "name": "Ionic",
+        "createdAt": "",
+        "startTime": 1708084800,
+        "endTime": 1709294400
+      },
+      "url": "https://app.galxe.com/quest/mode/GCoiTt4R28"
+    },
+    {
+      "name": "Sei Network",
+      "alias": "sei",
+      "category": "trending",
+      "latest": {
+        "id": "GCCCxt89wS",
+        "name": "Level Up with Whiffin: Enter the Sei Gaming Adventure 🎮🌊",
+        "createdAt": "",
+        "startTime": 1759402800,
+        "endTime": 1761821940
+      },
+      "url": "https://app.galxe.com/quest/sei/GCCCxt89wS"
+    },
+    {
+      "name": "Celestia",
+      "alias": "celestia",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Injective",
+      "alias": "injective",
+      "category": "trending",
+      "latest": {
+        "id": "GCVNzt8MRB",
+        "name": "$1,000 and OAT to Grab - 🇰🇷 KBW RWAiFi Summit",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/injective/GCVNzt8MRB"
+    },
+    {
+      "name": "Berachain",
+      "alias": "berachain",
+      "category": "trending",
+      "latest": {
+        "id": "GCjGGttCAG",
+        "name": "March of the Beras",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/berachain/GCjGGttCAG"
+    },
+    {
+      "name": "ZKFair",
+      "alias": "zkfair",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Mantle L2",
+      "alias": "mantleL2",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Aptos",
+      "alias": "aptos",
+      "category": "trending",
+      "latest": {
+        "id": "GCGZbtKep5",
+        "name": "Aptos Africa x Joule Finance",
+        "createdAt": "",
+        "startTime": 1728601200,
+        "endTime": 1729206000
+      },
+      "url": "https://app.galxe.com/quest/aptos/GCGZbtKep5"
+    },
+    {
+      "name": "Sui",
+      "alias": "sui",
+      "category": "trending",
+      "latest": {
+        "id": "GCb9Ut6wH2",
+        "name": "Momentum Odyssey: A Journey through the Sui Ecosystem",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/sui/GCb9Ut6wH2"
+    },
+    {
+      "name": "Solana",
+      "alias": "solana",
+      "category": "trending",
+      "latest": {
+        "id": "GCe4SUUhRz",
+        "name": "Dr. SOL - Presented by Project Galaxy on Solana",
+        "createdAt": "",
+        "startTime": 1646661600,
+        "endTime": 1691625600
+      },
+      "url": "https://app.galxe.com/quest/solana/GCe4SUUhRz"
+    },
+    {
+      "name": "TON",
+      "alias": "ton",
+      "category": "trending",
+      "latest": {
+        "id": "GCfi2tVHRo",
+        "name": "STON.fi - The TON Trials",
+        "createdAt": "",
+        "startTime": 1732579200,
+        "endTime": 1735171200
+      },
+      "url": "https://app.galxe.com/quest/ton/GCfi2tVHRo"
+    },
+    {
+      "name": "Near Protocol",
+      "alias": "near",
+      "category": "trending",
+      "latest": {
+        "id": "GCZZWt4drz",
+        "name": "BlackDragon Tasks 🐉",
+        "createdAt": "",
+        "startTime": 1708992000,
+        "endTime": 1709510400
+      },
+      "url": "https://app.galxe.com/quest/near/GCZZWt4drz"
+    },
+    {
+      "name": "Cosmos Hub",
+      "alias": "cosmos",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Kava",
+      "alias": "kava",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Celo",
+      "alias": "celo",
+      "category": "trending",
+      "latest": {
+        "id": "GCELjt4xt2",
+        "name": "Pool USDC on Celo",
+        "createdAt": "",
+        "startTime": 1709226000,
+        "endTime": 1710432000
+      },
+      "url": "https://app.galxe.com/quest/celo/GCELjt4xt2"
+    },
+    {
+      "name": "Conflux",
+      "alias": "conflux",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Binance Web3 Wallet",
+      "alias": "binanceweb3",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "OKX Wallet",
+      "alias": "okxwallet",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Bitget Wallet",
+      "alias": "bitgetwallet",
+      "category": "trending",
+      "latest": {
+        "id": "GCtQ5t43ju",
+        "name": "Bitget Wallet ICE-clusive Giveaway",
+        "createdAt": "",
+        "startTime": 1709546400,
+        "endTime": 1709892000
+      },
+      "url": "https://app.galxe.com/quest/bitgetwallet/GCtQ5t43ju"
+    },
+    {
+      "name": "Bybit Web3",
+      "alias": "bybitweb3",
+      "category": "trending",
+      "latest": {
+        "id": "GCcqutTQuP",
+        "name": "GM Network CyberV NFT WLs Giveaway",
+        "createdAt": "",
+        "startTime": 1711468800,
+        "endTime": 1711814400
+      },
+      "url": "https://app.galxe.com/quest/bybitweb3/GCcqutTQuP"
+    },
+    {
+      "name": "Gate Web3",
+      "alias": "gateio",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "KuCoin Web3",
+      "alias": "kucoin",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "MEXC",
+      "alias": "mexc",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "BingX",
+      "alias": "bingx",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Uniswap",
+      "alias": "uniswap",
+      "category": "trending",
+      "latest": {
+        "id": "GCQL7Ujanc",
+        "name": "Module 4: DEX",
+        "createdAt": "",
+        "startTime": 1692278840,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/uniswap/GCQL7Ujanc"
+    },
+    {
+      "name": "PancakeSwap",
+      "alias": "pancakeswap",
+      "category": "trending",
+      "latest": {
+        "id": "GCkh6t6aWZ",
+        "name": "PancakeSwap – $1,000 USDT Prize Pool",
+        "createdAt": "",
+        "startTime": 1755088200,
+        "endTime": 1757865540
+      },
+      "url": "https://app.galxe.com/quest/pancakeswap/GCkh6t6aWZ"
+    },
+    {
+      "name": "Curve Finance",
+      "alias": "curve",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Balancer",
+      "alias": "balancer",
+      "category": "trending",
+      "latest": {
+        "id": "GCFMLtvSC6",
+        "name": "Find Your Inner Balancer - The Arbitrum Arc [~$50K ARB Rewards]",
+        "createdAt": "",
+        "startTime": 1724040000,
+        "endTime": 1727712000
+      },
+      "url": "https://app.galxe.com/quest/balancer/GCFMLtvSC6"
+    },
+    {
+      "name": "Aave",
+      "alias": "aave",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Compound",
+      "alias": "compound",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "MakerDAO",
+      "alias": "makerdao",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Lido",
+      "alias": "lido",
+      "category": "trending",
+      "latest": {
+        "id": "GCqkJUWoFX",
+        "name": "Lido x Obol DVT Testnet ",
+        "createdAt": "",
+        "startTime": 1688680800,
+        "endTime": 1691359200
+      },
+      "url": "https://app.galxe.com/quest/lido/GCqkJUWoFX"
+    },
+    {
+      "name": "Rocket Pool",
+      "alias": "rocketpool",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Pendle",
+      "alias": "pendle",
+      "category": "trending",
+      "latest": {
+        "id": "GCGAoUUL3x",
+        "name": "Crew B",
+        "createdAt": "",
+        "startTime": 1629936000,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/pendle/GCGAoUUL3x"
+    },
+    {
+      "name": "EigenLayer",
+      "alias": "eigenlayer",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Ethena",
+      "alias": "ethena",
+      "category": "trending",
+      "latest": {
+        "id": "GCU1ht4dSw",
+        "name": "Ethena Shard Campaign Kickoff",
+        "createdAt": "",
+        "startTime": 1708300800,
+        "endTime": 1708992000
+      },
+      "url": "https://app.galxe.com/quest/ethena/GCU1ht4dSw"
+    },
+    {
+      "name": "Blast DeFi",
+      "alias": "blastdefi",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "ZKLend",
+      "alias": "zklend",
+      "category": "trending",
+      "latest": {
+        "id": "GCuVetTu5K",
+        "name": "Empower BWB Points Program: zkLend & Bitget Wallet $BWB Points Airdrop Plan",
+        "createdAt": "",
+        "startTime": 1711360800,
+        "endTime": 1714298400
+      },
+      "url": "https://app.galxe.com/quest/zklend/GCuVetTu5K"
+    },
+    {
+      "name": "Morpho",
+      "alias": "morpho",
+      "category": "trending",
+      "latest": {
+        "id": "GC7rHtkHa7",
+        "name": "🔴 Superfest - Explore Morpho and earn rewards!",
+        "createdAt": "",
+        "startTime": 1721685600,
+        "endTime": 1725314400
+      },
+      "url": "https://app.galxe.com/quest/morpho/GC7rHtkHa7"
+    },
+    {
+      "name": "Pendle Ecosystem",
+      "alias": "pendleeco",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "CyberConnect",
+      "alias": "cyberconnect",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Lens Protocol",
+      "alias": "lensprotocol",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Farcaster",
+      "alias": "farcaster",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Friend.tech",
+      "alias": "friendtech",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Galxe OAT Ecosystem",
+      "alias": "galxeoat",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Arbitrum Ecosystem",
+      "alias": "arbitrumeco",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Optimism Quests",
+      "alias": "optimismquest",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Linea Voyage",
+      "alias": "lineavoyage",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Base Quests",
+      "alias": "basequest",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Scroll Quests",
+      "alias": "scrollquest",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Taiko Quests",
+      "alias": "taikoquest",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "zkSync Era",
+      "alias": "zksyncera",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Starknet Quest",
+      "alias": "starknetquest",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Blast Points",
+      "alias": "blastpoints",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Mode Points",
+      "alias": "modepoints",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Merlin Points",
+      "alias": "merlinpoints",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Xai Gaming",
+      "alias": "xai",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Pixels Online",
+      "alias": "pixels",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Immutable X",
+      "alias": "immutablex",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Ronin Network",
+      "alias": "ronin",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "ApeCoin",
+      "alias": "apecoin",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "STEPN",
+      "alias": "stepn",
+      "category": "trending",
+      "latest": {
+        "id": "GCyaiUUDvZ",
+        "name": "Project Galaxy x STEPN AMA",
+        "createdAt": "",
+        "startTime": 1648215022,
+        "endTime": 1649509200
+      },
+      "url": "https://app.galxe.com/quest/stepn/GCyaiUUDvZ"
+    },
+    {
+      "name": "Big Time",
+      "alias": "bigtime",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Illuvium",
+      "alias": "illuvium",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "LayerZero",
+      "alias": "layerzero",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Stargate",
+      "alias": "stargate",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Wormhole",
+      "alias": "wormhole",
+      "category": "trending",
+      "latest": {
+        "id": "GC2e7tTEtZ",
+        "name": "Wormhole Basics",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/wormhole/GC2e7tTEtZ"
+    },
+    {
+      "name": "Axelar",
+      "alias": "axelar",
+      "category": "trending",
+      "latest": {
+        "id": "GC7RntwczW",
+        "name": "🎉Axelar x Polygon - $GONE Whitelist Giveaway!",
+        "createdAt": "",
+        "startTime": 1708059600,
+        "endTime": 1711080000
+      },
+      "url": "https://app.galxe.com/quest/axelar/GC7RntwczW"
+    },
+    {
+      "name": "Orbiter Finance",
+      "alias": "orbiter",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "deBridge",
+      "alias": "debridge",
+      "category": "trending",
+      "latest": {
+        "id": "GCyJSUtTRK",
+        "name": "deBridge + Rubic AMA",
+        "createdAt": "",
+        "startTime": 1661432400,
+        "endTime": 1691625600
+      },
+      "url": "https://app.galxe.com/quest/debridge/GCyJSUtTRK"
+    },
+    {
+      "name": "1inch",
+      "alias": "1inch",
+      "category": "trending",
+      "latest": {
+        "id": "GCM8Xtzy8G",
+        "name": "Stay connected!",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/1inch/GCM8Xtzy8G"
+    },
+    {
+      "name": "dYdX",
+      "alias": "dydx",
+      "category": "trending",
+      "latest": {
+        "id": "GCiMHtKd4x",
+        "name": "Chapter 1 - Learn about dYdX Unlimited to earn rewards!",
+        "createdAt": "",
+        "startTime": 1732543200,
+        "endTime": 1733875200
+      },
+      "url": "https://app.galxe.com/quest/dydx/GCiMHtKd4x"
+    },
+    {
+      "name": "GMX",
+      "alias": "gmx",
+      "category": "trending",
+      "latest": {
+        "id": "GCtYstTZxN",
+        "name": "Empower BWB Points Program: GMX & Bitget Wallet $BWB Points Airdrop plan",
+        "createdAt": "",
+        "startTime": 1711364400,
+        "endTime": 1714471200
+      },
+      "url": "https://app.galxe.com/quest/gmx/GCtYstTZxN"
+    },
+    {
+      "name": "Hyperliquid",
+      "alias": "hyperliquid",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Kwenta",
+      "alias": "kwenta",
+      "category": "trending",
+      "latest": {
+        "id": "GCvZXUnmLv",
+        "name": "Build Bridges with Jumper and Li.Fi!",
+        "createdAt": "",
+        "startTime": 1698735600,
+        "endTime": 1699430400
+      },
+      "url": "https://app.galxe.com/quest/kwenta/GCvZXUnmLv"
+    },
+    {
+      "name": "Galxe Campaign Hub",
+      "alias": "galxecampaigns",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Ethereum Foundation",
+      "alias": "ethereum",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Bitcoin Ecosystem",
+      "alias": "bitcoin",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Curve Ecosystem",
+      "alias": "curveeco",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Lido stETH",
+      "alias": "steth",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Pendle LRT",
+      "alias": "pendlelrt",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "EigenLayer Restaking",
+      "alias": "restaking",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Linea zkEVM",
+      "alias": "lineazkevm",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Polygon zkEVM",
+      "alias": "polygonzkevm",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Scroll zkEVM",
+      "alias": "scrollzkevm",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Taiko zkRollup",
+      "alias": "taikozk",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "zkSync Lite",
+      "alias": "zksynclite",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Arbitrum Nitro",
+      "alias": "arbitrumone",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Optimism Mainnet",
+      "alias": "optimismmainnet",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Base Mainnet",
+      "alias": "basemainnet",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Blast Mainnet",
+      "alias": "blastmainnet",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Synthetix",
+      "alias": "synthetix",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "GMX Arbitrum",
+      "alias": "gmxarbitrum",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Radiant Capital",
+      "alias": "radiant",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Camelot DEX",
+      "alias": "camelot",
+      "category": "trending",
+      "latest": {
+        "id": "GCmoQtUMDL",
+        "name": "Galxe's Arbitrum STIP Blast",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/camelot/GCmoQtUMDL"
+    },
+    {
+      "name": "Lyra Finance",
+      "alias": "lyra",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Paraswap",
+      "alias": "paraswap",
+      "category": "trending",
+      "latest": {
+        "id": "GCMh1tgfyN",
+        "name": "Welcome to the new era of ParaSwap: Augustus V6.2 is here 🔥",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/paraswap/GCMh1tgfyN"
+    },
+    {
+      "name": "Hashflow",
+      "alias": "hashflow",
+      "category": "trending",
+      "latest": {
+        "id": "GCstZthtZi",
+        "name": "Hashflow Quests",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/hashflow/GCstZthtZi"
+    },
+    {
+      "name": "OpenOcean",
+      "alias": "openocean",
+      "category": "trending",
+      "latest": {
+        "id": "GC69WtkFkC",
+        "name": "Explore Sovryn on Rootstock",
+        "createdAt": "",
+        "startTime": 1721232000,
+        "endTime": 1724457600
+      },
+      "url": "https://app.galxe.com/quest/openocean/GC69WtkFkC"
+    },
+    {
+      "name": "Galxe Starter Quests",
+      "alias": "galxestarter",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "Web3 Gaming Hub",
+      "alias": "web3gaminghub",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "NFT Bluechip Hub",
+      "alias": "nftbluechip",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "DeFi Bluechip Hub",
+      "alias": "defibluechip",
+      "category": "trending",
+      "latest": null,
+      "url": null
+    },
+    {
+      "name": "TeahouseFinance",
+      "alias": "TeahouseFinance",
+      "category": "custom",
+      "latest": {
+        "id": "GCRRGt8D22",
+        "name": "Earn $SEI Before TGE 🦖🔥 Extra Rewards Await!",
+        "createdAt": "",
+        "startTime": 1763089200,
+        "endTime": 1764298800
+      },
+      "url": "https://app.galxe.com/quest/TeahouseFinance/GCRRGt8D22"
+    },
+    {
+      "name": "Colb",
+      "alias": "Colb",
+      "category": "custom",
+      "latest": {
+        "id": "GCYpot83Du",
+        "name": "Colb Genesis Quest - Beta Access  🐝",
+        "createdAt": "",
+        "startTime": 1763065800,
+        "endTime": 1764621000
+      },
+      "url": "https://app.galxe.com/quest/Colb/GCYpot83Du"
+    },
+    {
+      "name": "Colb",
+      "alias": "Colb",
+      "category": "custom",
+      "latest": {
+        "id": "GCYpot83Du",
+        "name": "Colb Genesis Quest - Beta Access  🐝",
+        "createdAt": "",
+        "startTime": 1763065800,
+        "endTime": 1764621000
+      },
+      "url": "https://app.galxe.com/quest/Colb/GCYpot83Du"
+    },
+    {
+      "name": "NOFA.AI",
+      "alias": "NOFA.AI",
+      "category": "custom",
+      "latest": {
+        "id": "GCrkGt8eMB",
+        "name": "test1",
+        "createdAt": "",
+        "startTime": 1763049600,
+        "endTime": 1764604800
+      },
+      "url": "https://app.galxe.com/quest/NOFA.AI/GCrkGt8eMB"
+    },
+    {
+      "name": "hanchain",
+      "alias": "hanchain",
+      "category": "custom",
+      "latest": {
+        "id": "GCTBxt8y9b",
+        "name": "$500 USDT Giveaway: Stake, Unlock Free K-POP Tunes, and Win more",
+        "createdAt": "",
+        "startTime": 1758703200,
+        "endTime": 1760367599
+      },
+      "url": "https://app.galxe.com/quest/hanchain/GCTBxt8y9b"
+    },
+    {
+      "name": "XTExchange",
+      "alias": "XTExchange",
+      "category": "custom",
+      "latest": {
+        "id": "GC9uzt6Th6",
+        "name": "XT.COM Join to Earn Event",
+        "createdAt": "",
+        "startTime": 1753777800,
+        "endTime": 1754215200
+      },
+      "url": "https://app.galxe.com/quest/XTExchange/GC9uzt6Th6"
+    },
+    {
+      "name": "DittoLabs",
+      "alias": "DittoLabs",
+      "category": "custom",
+      "latest": {
+        "id": "GCF1ft8x75",
+        "name": "Ditto Journey to TGE 2 — Game Testers",
+        "createdAt": "",
+        "startTime": 1760284800,
+        "endTime": 1763481600
+      },
+      "url": "https://app.galxe.com/quest/DittoLabs/GCF1ft8x75"
+    },
+    {
+      "name": "GAIB",
+      "alias": "GAIB",
+      "category": "custom",
+      "latest": {
+        "id": "GCvvpt6DpR",
+        "name": "⚡ GAIB Creator Kickoff : 1-Week Exclusive OAT",
+        "createdAt": "",
+        "startTime": 1754557200,
+        "endTime": 1755075600
+      },
+      "url": "https://app.galxe.com/quest/GAIB/GCvvpt6DpR"
+    },
+    {
+      "name": "Permission",
+      "alias": "Permission",
+      "category": "custom",
+      "latest": {
+        "id": "GChgbt65CG",
+        "name": "Permission Agent Early Access Announcement: 3 Tasks $30 USDC",
+        "createdAt": "",
+        "startTime": 1756191600,
+        "endTime": 1759215600
+      },
+      "url": "https://app.galxe.com/quest/Permission/GChgbt65CG"
+    },
+    {
+      "name": "SynaplogicAI",
+      "alias": "SynaplogicAI",
+      "category": "custom",
+      "latest": {
+        "id": "GCWCEt8MsK",
+        "name": "Synaplogic Onboarding Quest",
+        "createdAt": "",
+        "startTime": 1760461200,
+        "endTime": 1768410000
+      },
+      "url": "https://app.galxe.com/quest/SynaplogicAI/GCWCEt8MsK"
+    },
+    {
+      "name": "Swap.io",
+      "alias": "Swap.io",
+      "category": "custom",
+      "latest": {
+        "id": "GCXNyt8T8k",
+        "name": "Join our Socials",
+        "createdAt": "",
+        "startTime": 1761145971,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/Swap.io/GCXNyt8T8k"
+    },
+    {
+      "name": "Kommunitas",
+      "alias": "Kommunitas",
+      "category": "custom",
+      "latest": {
+        "id": "GCGkatfKPZ",
+        "name": "Participate in the t3rn IKO Sale",
+        "createdAt": "",
+        "startTime": 1752483600,
+        "endTime": 1752685199
+      },
+      "url": "https://app.galxe.com/quest/Kommunitas/GCGkatfKPZ"
+    },
+    {
+      "name": "MiniDapp",
+      "alias": "MiniDapp",
+      "category": "custom",
+      "latest": {
+        "id": "GCiUBtmjsH",
+        "name": "Fate War OKX Wallet Connect",
+        "createdAt": "",
+        "startTime": 1747724400,
+        "endTime": 1750402800
+      },
+      "url": "https://app.galxe.com/quest/MiniDapp/GCiUBtmjsH"
+    },
+    {
+      "name": "cplx.io",
+      "alias": "cplx.io",
+      "category": "custom",
+      "latest": {
+        "id": "GCPUGt8ZwP",
+        "name": "CPLX Early Access NFT & Role",
+        "createdAt": "",
+        "startTime": 1762880400,
+        "endTime": 1764435600
+      },
+      "url": "https://app.galxe.com/quest/cplx.io/GCPUGt8ZwP"
+    },
+    {
+      "name": "CityProtocol",
+      "alias": "CityProtocol",
+      "category": "custom",
+      "latest": {
+        "id": "GCYZRt8iw4",
+        "name": "Learn about the City",
+        "createdAt": "",
+        "startTime": 1761019200,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/CityProtocol/GCYZRt8iw4"
+    },
+    {
+      "name": "mememarket",
+      "alias": "mememarket",
+      "category": "custom",
+      "latest": {
+        "id": "GCiTet8JSG",
+        "name": "The Road To $MFUN",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/mememarket/GCiTet8JSG"
+    },
+    {
+      "name": "Galxe",
+      "alias": "Galxe",
+      "category": "custom",
+      "latest": {
+        "id": "GCjg1t8ju3",
+        "name": "Galxe 'Starboard' Starboard Rewards - Top 200",
+        "createdAt": "",
+        "startTime": 1759248000,
+        "endTime": 1762725600
+      },
+      "url": "https://app.galxe.com/quest/Galxe/GCjg1t8ju3"
+    },
+    {
+      "name": "GameonWorld",
+      "alias": "GameonWorld",
+      "category": "custom",
+      "latest": {
+        "id": "GCoUCt8m7x",
+        "name": "Community Quest 2 - Gameon World - Collect Airdrop 100 points!",
+        "createdAt": "",
+        "startTime": 1762815600,
+        "endTime": 1763420400
+      },
+      "url": "https://app.galxe.com/quest/GameonWorld/GCoUCt8m7x"
+    },
+    {
+      "name": "GlobalDollarNetwork",
+      "alias": "GlobalDollarNetwork",
+      "category": "custom",
+      "latest": {
+        "id": "GCDTat8y7R",
+        "name": "Join the Global Dollar Network Community Early",
+        "createdAt": "",
+        "startTime": 1762480800,
+        "endTime": 1764208800
+      },
+      "url": "https://app.galxe.com/quest/GlobalDollarNetwork/GCDTat8y7R"
+    },
+    {
+      "name": "InterlinkLabs",
+      "alias": "InterlinkLabs",
+      "category": "custom",
+      "latest": {
+        "id": "GCX7YtpckC",
+        "name": "🌌 ITL Silver Party - Community Kickoff!",
+        "createdAt": "",
+        "startTime": 1737914400,
+        "endTime": 1740592800
+      },
+      "url": "https://app.galxe.com/quest/InterlinkLabs/GCX7YtpckC"
+    },
+    {
+      "name": "MILK",
+      "alias": "MILK",
+      "category": "custom",
+      "latest": {
+        "id": "GCDmrt8KZa",
+        "name": "MLK Trading Season 2 — $7,000 MLK Rewards",
+        "createdAt": "",
+        "startTime": 1761145200,
+        "endTime": 1763737200
+      },
+      "url": "https://app.galxe.com/quest/MILK/GCDmrt8KZa"
+    },
+    {
+      "name": "GAM3Sgg",
+      "alias": "GAM3Sgg",
+      "category": "custom",
+      "latest": {
+        "id": "GCtsht6j4F",
+        "name": "PlayStation now live on GAM3S.GG",
+        "createdAt": "",
+        "startTime": 1753646400,
+        "endTime": 1754856000
+      },
+      "url": "https://app.galxe.com/quest/GAM3Sgg/GCtsht6j4F"
+    },
+    {
+      "name": "AGNTHub",
+      "alias": "AGNTHub",
+      "category": "custom",
+      "latest": {
+        "id": "GCrJHtfBJ2",
+        "name": "AGNT New Vision Contest",
+        "createdAt": "",
+        "startTime": 1752008400,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/AGNTHub/GCrJHtfBJ2"
+    },
+    {
+      "name": "MonacoProtocol",
+      "alias": "MonacoProtocol",
+      "category": "custom",
+      "latest": {
+        "id": "GCdNyt6MTW",
+        "name": "Raffle Rewards — Weekly Engagement Participants",
+        "createdAt": "",
+        "startTime": 1754751600,
+        "endTime": 1759417200
+      },
+      "url": "https://app.galxe.com/quest/MonacoProtocol/GCdNyt6MTW"
+    },
+    {
+      "name": "x1ecochain",
+      "alias": "x1ecochain",
+      "category": "custom",
+      "latest": {
+        "id": "GCq2GtfDjB",
+        "name": "X1 EcoChain 🤝 Blazpay AI",
+        "createdAt": "",
+        "startTime": 1752778800,
+        "endTime": 1758308400
+      },
+      "url": "https://app.galxe.com/quest/x1ecochain/GCq2GtfDjB"
+    },
+    {
+      "name": "WheelX.fi",
+      "alias": "WheelX.fi",
+      "category": "custom",
+      "latest": {
+        "id": "GCGMPt6JDB",
+        "name": "\"Soneium Score Seeker\" Badge",
+        "createdAt": "",
+        "startTime": 1756396800,
+        "endTime": 1759161600
+      },
+      "url": "https://app.galxe.com/quest/WheelX.fi/GCGMPt6JDB"
+    },
+    {
+      "name": "NEUSNetwork",
+      "alias": "NEUSNetwork",
+      "category": "custom",
+      "latest": {
+        "id": "GCn1bt8efU",
+        "name": "NEUS: Limited Genesis Launch",
+        "createdAt": "",
+        "startTime": 1761627600,
+        "endTime": 1764568800
+      },
+      "url": "https://app.galxe.com/quest/NEUSNetwork/GCn1bt8efU"
+    },
+    {
+      "name": "securedfi",
+      "alias": "securedfi",
+      "category": "custom",
+      "latest": {
+        "id": "GCNZTt6uCb",
+        "name": "Secured Finance Community Call #92",
+        "createdAt": "",
+        "startTime": 1753966800,
+        "endTime": 1755176400
+      },
+      "url": "https://app.galxe.com/quest/securedfi/GCNZTt6uCb"
+    },
+    {
+      "name": "yala",
+      "alias": "yala",
+      "category": "custom",
+      "latest": {
+        "id": "GCBTEt6qD3",
+        "name": "Ice Cream Run: $6,000 USDT Prize Pool",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/yala/GCBTEt6qD3"
+    },
+    {
+      "name": "OrioleInsights",
+      "alias": "OrioleInsights",
+      "category": "custom",
+      "latest": {
+        "id": "GCow5t8aoB",
+        "name": "Proof of Tweet",
+        "createdAt": "",
+        "startTime": 1760562000,
+        "endTime": 1763071200
+      },
+      "url": "https://app.galxe.com/quest/OrioleInsights/GCow5t8aoB"
+    },
+    {
+      "name": "Rumi",
+      "alias": "Rumi",
+      "category": "custom",
+      "latest": {
+        "id": "GCmVBt8qZF",
+        "name": "Rumi Early Access — Win $1,000!",
+        "createdAt": "",
+        "startTime": 1762318800,
+        "endTime": 1764910800
+      },
+      "url": "https://app.galxe.com/quest/Rumi/GCmVBt8qZF"
+    },
+    {
+      "name": "GONAD_ON_MONAD",
+      "alias": "GONAD_ON_MONAD",
+      "category": "custom",
+      "latest": {
+        "id": "GCM8Ct8cEF",
+        "name": "Discover the LORE of GONAD",
+        "createdAt": "",
+        "startTime": 1762905600,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/GONAD_ON_MONAD/GCM8Ct8cEF"
+    },
+    {
+      "name": "spaceid",
+      "alias": "spaceid",
+      "category": "custom",
+      "latest": {
+        "id": "GCyX6t6VqN",
+        "name": "Epic Anniversary Celebration I: Power of Domains with $13,700 Prize Pool",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/spaceid/GCyX6t6VqN"
+    },
+    {
+      "name": "LiveArt",
+      "alias": "LiveArt",
+      "category": "custom",
+      "latest": {
+        "id": "GCXk1t4rxy",
+        "name": "LiveArt: Lantern Festival Campaign",
+        "createdAt": "",
+        "startTime": 1708470000,
+        "endTime": 1709161200
+      },
+      "url": "https://app.galxe.com/quest/LiveArt/GCXk1t4rxy"
+    },
+    {
+      "name": "EnsoFi",
+      "alias": "EnsoFi",
+      "category": "custom",
+      "latest": {
+        "id": "GCUqNt6pNn",
+        "name": "[Solana] Supply SOL or LSTs with EnsoFi",
+        "createdAt": "",
+        "startTime": 1762189200,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/EnsoFi/GCUqNt6pNn"
+    },
+    {
+      "name": "TurbineFinance",
+      "alias": "TurbineFinance",
+      "category": "custom",
+      "latest": {
+        "id": "GCQaJt8JXc",
+        "name": "The Big Short: Stablecoins Edition",
+        "createdAt": "",
+        "startTime": 1763280000,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/TurbineFinance/GCQaJt8JXc"
+    },
+    {
+      "name": "OSL",
+      "alias": "OSL",
+      "category": "custom",
+      "latest": {
+        "id": "GCBS7t8CjF",
+        "name": "OSL Q&A II",
+        "createdAt": "",
+        "startTime": 1761048000,
+        "endTime": 1762257600
+      },
+      "url": "https://app.galxe.com/quest/OSL/GCBS7t8CjF"
+    },
+    {
+      "name": "Moso",
+      "alias": "Moso",
+      "category": "custom",
+      "latest": {
+        "id": "GC1XPtfNCV",
+        "name": "Panda Masters 9 - Day 9  (Win up to $300 USDC)",
+        "createdAt": "",
+        "startTime": 1752044400,
+        "endTime": 1754031600
+      },
+      "url": "https://app.galxe.com/quest/Moso/GC1XPtfNCV"
+    },
+    {
+      "name": "PACT",
+      "alias": "PACT",
+      "category": "custom",
+      "latest": {
+        "id": "GC8Jrt8HtV",
+        "name": "PACT Points Sprint #3",
+        "createdAt": "",
+        "startTime": 1761109200,
+        "endTime": 1761714000
+      },
+      "url": "https://app.galxe.com/quest/PACT/GC8Jrt8HtV"
+    },
+    {
+      "name": "Whiffin",
+      "alias": "Whiffin",
+      "category": "custom",
+      "latest": {
+        "id": "GCLuFt8G5r",
+        "name": "Whiffin Lucky Puff: Play, Draw, and win USDC rewards!",
+        "createdAt": "",
+        "startTime": 1762876800,
+        "endTime": 1765468800
+      },
+      "url": "https://app.galxe.com/quest/Whiffin/GCLuFt8G5r"
+    },
+    {
+      "name": "sachi",
+      "alias": "sachi",
+      "category": "custom",
+      "latest": {
+        "id": "GCrx7t8M99",
+        "name": "Become a true SACHIan! 💪",
+        "createdAt": "",
+        "startTime": 1760824800,
+        "endTime": 1762948800
+      },
+      "url": "https://app.galxe.com/quest/sachi/GCrx7t8M99"
+    },
+    {
+      "name": "Piggycell",
+      "alias": "Piggycell",
+      "category": "custom",
+      "latest": {
+        "id": "GCKEdt8tvX",
+        "name": "[X Support] Support \"Limitless Meetup\" on X",
+        "createdAt": "",
+        "startTime": 1758272661,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/Piggycell/GCKEdt8tvX"
+    },
+    {
+      "name": "Sei",
+      "alias": "Sei",
+      "category": "custom",
+      "latest": {
+        "id": "GCCCxt89wS",
+        "name": "Level Up with Whiffin: Enter the Sei Gaming Adventure 🎮🌊",
+        "createdAt": "",
+        "startTime": 1759402800,
+        "endTime": 1761821940
+      },
+      "url": "https://app.galxe.com/quest/Sei/GCCCxt89wS"
+    },
+    {
+      "name": "SolanaGaming",
+      "alias": "SolanaGaming",
+      "category": "custom",
+      "latest": {
+        "id": "GCFhit89Pt",
+        "name": "PIKAMOON",
+        "createdAt": "",
+        "startTime": 1761148800,
+        "endTime": 1761750000
+      },
+      "url": "https://app.galxe.com/quest/SolanaGaming/GCFhit89Pt"
+    },
+    {
+      "name": "DeFihubfi",
+      "alias": "DeFihubfi",
+      "category": "custom",
+      "latest": {
+        "id": "GCE6CtfS9w",
+        "name": "Like and share DeFihub’s posts.",
+        "createdAt": "",
+        "startTime": 1752721200,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/DeFihubfi/GCE6CtfS9w"
+    },
+    {
+      "name": "Fuglys",
+      "alias": "Fuglys",
+      "category": "custom",
+      "latest": {
+        "id": "GC9GKt61U4",
+        "name": "Monthly Role Hunt — Earn Points Toward the Whitelist!",
+        "createdAt": "",
+        "startTime": 1754085600,
+        "endTime": 1756677600
+      },
+      "url": "https://app.galxe.com/quest/Fuglys/GC9GKt61U4"
+    },
+    {
+      "name": "mantle",
+      "alias": "mantle",
+      "category": "custom",
+      "latest": {
+        "id": "GCR5mtd13P",
+        "name": "Vertex Dominion: Vertex X Mantle",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/mantle/GCR5mtd13P"
+    },
+    {
+      "name": "D3LTA_Army",
+      "alias": "D3LTA_Army",
+      "category": "custom",
+      "latest": {
+        "id": "GCdnbt8V6U",
+        "name": "D3LTA Mission 2: $1,250 Bootcamp - Quest 1",
+        "createdAt": "",
+        "startTime": 1761638400,
+        "endTime": 1762506000
+      },
+      "url": "https://app.galxe.com/quest/D3LTA_Army/GCdnbt8V6U"
+    },
+    {
+      "name": "haiku.trade",
+      "alias": "haiku.trade",
+      "category": "custom",
+      "latest": {
+        "id": "GCNBTt8Xud",
+        "name": "echo the words of haiku",
+        "createdAt": "",
+        "startTime": 1758103519,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/haiku.trade/GCNBTt8Xud"
+    },
+    {
+      "name": "LineupGames",
+      "alias": "LineupGames",
+      "category": "custom",
+      "latest": {
+        "id": "GCsPqt8KHY",
+        "name": "Part 3: Coming Soon...",
+        "createdAt": "",
+        "startTime": 1762784871,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/LineupGames/GCsPqt8KHY"
+    },
+    {
+      "name": "Astrolology",
+      "alias": "Astrolology",
+      "category": "custom",
+      "latest": {
+        "id": "GCu6qt8XRU",
+        "name": "AstroLOLogy - The Stars Align",
+        "createdAt": "",
+        "startTime": 1762776000,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/Astrolology/GCu6qt8XRU"
+    },
+    {
+      "name": "Botanix",
+      "alias": "Botanix",
+      "category": "custom",
+      "latest": {
+        "id": "GCaFat84CV",
+        "name": "Metrics X",
+        "createdAt": "",
+        "startTime": 1761802073,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/Botanix/GCaFat84CV"
+    },
+    {
+      "name": "EarnOS",
+      "alias": "EarnOS",
+      "category": "custom",
+      "latest": {
+        "id": "GCnZ6t8c78",
+        "name": "EarnOS Economy Kickoff",
+        "createdAt": "",
+        "startTime": 1759359600,
+        "endTime": 1762948800
+      },
+      "url": "https://app.galxe.com/quest/EarnOS/GCnZ6t8c78"
+    },
+    {
+      "name": "perspectiveai",
+      "alias": "perspectiveai",
+      "category": "custom",
+      "latest": {
+        "id": "GCduDt61w3",
+        "name": "Perspective AI × Arichain",
+        "createdAt": "",
+        "startTime": 1755669600,
+        "endTime": 1756879200
+      },
+      "url": "https://app.galxe.com/quest/perspectiveai/GCduDt61w3"
+    },
+    {
+      "name": "gamblr",
+      "alias": "gamblr",
+      "category": "custom",
+      "latest": {
+        "id": "GCMuHtfUMP",
+        "name": "Twitter - Doubles Wimbledon July 8",
+        "createdAt": "",
+        "startTime": 1751918400,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/gamblr/GCMuHtfUMP"
+    },
+    {
+      "name": "re",
+      "alias": "re",
+      "category": "custom",
+      "latest": {
+        "id": "GCogst8wrq",
+        "name": "Re Mega Quest",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/re/GCogst8wrq"
+    },
+    {
+      "name": "xstar",
+      "alias": "xstar",
+      "category": "custom",
+      "latest": {
+        "id": "GCgJDt6KLt",
+        "name": "Onboard Into NameFi 2.0",
+        "createdAt": "",
+        "startTime": 1755734400,
+        "endTime": 1756908000
+      },
+      "url": "https://app.galxe.com/quest/xstar/GCgJDt6KLt"
+    },
+    {
+      "name": "Orbler",
+      "alias": "Orbler",
+      "category": "custom",
+      "latest": {
+        "id": "GCefXtfEcv",
+        "name": "🚀 Road to Orbler 2.0",
+        "createdAt": "",
+        "startTime": 1751302800,
+        "endTime": 1761843600
+      },
+      "url": "https://app.galxe.com/quest/Orbler/GCefXtfEcv"
+    },
+    {
+      "name": "BenFen",
+      "alias": "BenFen",
+      "category": "custom",
+      "latest": {
+        "id": "GCZvzt8rGr",
+        "name": "Become an Early Participant and Increase Your Chances of More Token Airdrops",
+        "createdAt": "",
+        "startTime": 1758211200,
+        "endTime": 1759939200
+      },
+      "url": "https://app.galxe.com/quest/BenFen/GCZvzt8rGr"
+    },
+    {
+      "name": "PinAI",
+      "alias": "PinAI",
+      "category": "custom",
+      "latest": {
+        "id": "GChZCtx95f",
+        "name": "PIN AI - The Open Platform for Personal AI",
+        "createdAt": "",
+        "startTime": 1726597800,
+        "endTime": 1727807400
+      },
+      "url": "https://app.galxe.com/quest/PinAI/GChZCtx95f"
+    },
+    {
+      "name": "NatixNetwork",
+      "alias": "NatixNetwork",
+      "category": "custom",
+      "latest": {
+        "id": "GCcFKt6hZP",
+        "name": "August 2025 Twitter Engagement - Updated Daily",
+        "createdAt": "",
+        "startTime": 1753999200,
+        "endTime": 1756677540
+      },
+      "url": "https://app.galxe.com/quest/NatixNetwork/GCcFKt6hZP"
+    },
+    {
+      "name": "glue",
+      "alias": "glue",
+      "category": "custom",
+      "latest": {
+        "id": "GCqcst89Sw",
+        "name": "November Quest: Learn & Earn with Glue!",
+        "createdAt": "",
+        "startTime": 1762108200,
+        "endTime": 1764441000
+      },
+      "url": "https://app.galxe.com/quest/glue/GCqcst89Sw"
+    },
+    {
+      "name": "caliverse",
+      "alias": "caliverse",
+      "category": "custom",
+      "latest": {
+        "id": "GCjJwt68iA",
+        "name": "Users who have claimed in 14~20 rounds(August)",
+        "createdAt": "",
+        "startTime": 1756364400,
+        "endTime": 1759158000
+      },
+      "url": "https://app.galxe.com/quest/caliverse/GCjJwt68iA"
+    },
+    {
+      "name": "lawyerd",
+      "alias": "lawyerd",
+      "category": "custom",
+      "latest": {
+        "id": "GC9wytoqod",
+        "name": "Join the Fight Against Scams with Lawyerd!",
+        "createdAt": "",
+        "startTime": 1734386400,
+        "endTime": 1736200800
+      },
+      "url": "https://app.galxe.com/quest/lawyerd/GC9wytoqod"
+    },
+    {
+      "name": "nebulafi",
+      "alias": "nebulafi",
+      "category": "custom",
+      "latest": {
+        "id": "GCUFst85ft",
+        "name": "Trick or treat! 🎃",
+        "createdAt": "",
+        "startTime": 1762016400,
+        "endTime": 1765645200
+      },
+      "url": "https://app.galxe.com/quest/nebulafi/GCUFst85ft"
+    },
+    {
+      "name": "EcoYield",
+      "alias": "EcoYield",
+      "category": "custom",
+      "latest": {
+        "id": "GCDwrt8VtC",
+        "name": "🔥 250 USDT Pool: The EcoYiel Presale Community Quest",
+        "createdAt": "",
+        "startTime": 1761084000,
+        "endTime": 1762297200
+      },
+      "url": "https://app.galxe.com/quest/EcoYield/GCDwrt8VtC"
+    },
+    {
+      "name": "Enigma",
+      "alias": "Enigma",
+      "category": "custom",
+      "latest": {
+        "id": "GCiYat868i",
+        "name": "Follow the official Enigma X account",
+        "createdAt": "",
+        "startTime": 1762318800,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/Enigma/GCiYat868i"
+    },
+    {
+      "name": "KarrierOne",
+      "alias": "KarrierOne",
+      "category": "custom",
+      "latest": {
+        "id": "GCrYMtfhic",
+        "name": "Meet Your KNS",
+        "createdAt": "",
+        "startTime": 1753376400,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/KarrierOne/GCrYMtfhic"
+    },
+    {
+      "name": "Lendxyz",
+      "alias": "Lendxyz",
+      "category": "custom",
+      "latest": {
+        "id": "GCoqPtfeP2",
+        "name": "👑 Lend Alpha Goated Tester",
+        "createdAt": "",
+        "startTime": 1752012000,
+        "endTime": 1755208800
+      },
+      "url": "https://app.galxe.com/quest/Lendxyz/GCoqPtfeP2"
+    },
+    {
+      "name": "Ambercoin",
+      "alias": "Ambercoin",
+      "category": "custom",
+      "latest": {
+        "id": "GCA2bt8AfB",
+        "name": "Introduction to the Amber_Coin_NFT project",
+        "createdAt": "",
+        "startTime": 1761602400,
+        "endTime": 1764280800
+      },
+      "url": "https://app.galxe.com/quest/Ambercoin/GCA2bt8AfB"
+    },
+    {
+      "name": "Rails",
+      "alias": "Rails",
+      "category": "custom",
+      "latest": {
+        "id": "GCvwst8x6R",
+        "name": "Stellar XLM goes live on rails.xyz",
+        "createdAt": "",
+        "startTime": 1761951600,
+        "endTime": 1762214400
+      },
+      "url": "https://app.galxe.com/quest/Rails/GCvwst8x6R"
+    },
+    {
+      "name": "dabbanetwork",
+      "alias": "dabbanetwork",
+      "category": "custom",
+      "latest": {
+        "id": "GCeeHtfJCC",
+        "name": "Daily Dash Day 2",
+        "createdAt": "",
+        "startTime": 1752060600,
+        "endTime": 1752147000
+      },
+      "url": "https://app.galxe.com/quest/dabbanetwork/GCeeHtfJCC"
+    },
+    {
+      "name": "ChimpxAI",
+      "alias": "ChimpxAI",
+      "category": "custom",
+      "latest": {
+        "id": "GCemWt6fGL",
+        "name": "Day 1 - Earn XP Boosters",
+        "createdAt": "",
+        "startTime": 1755282600,
+        "endTime": 1755455400
+      },
+      "url": "https://app.galxe.com/quest/ChimpxAI/GCemWt6fGL"
+    },
+    {
+      "name": "Fortuva",
+      "alias": "Fortuva",
+      "category": "custom",
+      "latest": {
+        "id": "GCgwMt8rym",
+        "name": "Play 3 Prediction Rounds",
+        "createdAt": "",
+        "startTime": 1763366400,
+        "endTime": 1764489600
+      },
+      "url": "https://app.galxe.com/quest/Fortuva/GCgwMt8rym"
+    },
+    {
+      "name": "zofinance",
+      "alias": "zofinance",
+      "category": "custom",
+      "latest": {
+        "id": "GCmqrt82gx",
+        "name": "ZO Ignition: $20,000 Prize Pool + ZO Points",
+        "createdAt": "",
+        "startTime": 1762210800,
+        "endTime": 1764630000
+      },
+      "url": "https://app.galxe.com/quest/zofinance/GCmqrt82gx"
+    },
+    {
+      "name": "theo",
+      "alias": "theo",
+      "category": "custom",
+      "latest": {
+        "id": "GCvddt8hYF",
+        "name": "Engage with Theo",
+        "createdAt": "",
+        "startTime": 1758294000,
+        "endTime": 1759590000
+      },
+      "url": "https://app.galxe.com/quest/theo/GCvddt8hYF"
+    },
+    {
+      "name": "Algorand",
+      "alias": "Algorand",
+      "category": "custom",
+      "latest": {
+        "id": "GCqbdt8bUi",
+        "name": "Week 4: One Retweet Closer to Rewards",
+        "createdAt": "",
+        "startTime": 1760306400,
+        "endTime": 1760824800
+      },
+      "url": "https://app.galxe.com/quest/Algorand/GCqbdt8bUi"
+    },
+    {
+      "name": "nibiruchain",
+      "alias": "nibiruchain",
+      "category": "custom",
+      "latest": {
+        "id": "GCxYmt8895",
+        "name": "How to Onboard onto Nibiru (w/ USDC)",
+        "createdAt": "",
+        "startTime": 1759158000,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/nibiruchain/GCxYmt8895"
+    },
+    {
+      "name": "Threshold",
+      "alias": "Threshold",
+      "category": "custom",
+      "latest": {
+        "id": "GCytMtfRp8",
+        "name": "Quest 2: Empowering BTCFi on Bucket",
+        "createdAt": "",
+        "startTime": 1753225200,
+        "endTime": 1755648000
+      },
+      "url": "https://app.galxe.com/quest/Threshold/GCytMtfRp8"
+    },
+    {
+      "name": "zkCandy",
+      "alias": "zkCandy",
+      "category": "custom",
+      "latest": {
+        "id": "GCpcbt6xKq",
+        "name": "ZKcandy NFTs Collection",
+        "createdAt": "",
+        "startTime": 1755878400,
+        "endTime": 1761148800
+      },
+      "url": "https://app.galxe.com/quest/zkCandy/GCpcbt6xKq"
+    },
+    {
+      "name": "xyo",
+      "alias": "xyo",
+      "category": "custom",
+      "latest": {
+        "id": "GCmWyt8Ydg",
+        "name": "XYO Social Point Collection",
+        "createdAt": "",
+        "startTime": 1760545800,
+        "endTime": 1763046000
+      },
+      "url": "https://app.galxe.com/quest/xyo/GCmWyt8Ydg"
+    },
+    {
+      "name": "defichoice",
+      "alias": "defichoice",
+      "category": "custom",
+      "latest": {
+        "id": "GCMSatfhMp",
+        "name": "[#21]  Mint & Vote – Win 15 USDC + 1000 Points!",
+        "createdAt": "",
+        "startTime": 1752184800,
+        "endTime": 1753999200
+      },
+      "url": "https://app.galxe.com/quest/defichoice/GCMSatfhMp"
+    },
+    {
+      "name": "HILO",
+      "alias": "HILO",
+      "category": "custom",
+      "latest": {
+        "id": "GChRntpBYZ",
+        "name": "FOLLOW us and Visit our Website! 5 USDT Reward🎉",
+        "createdAt": "",
+        "startTime": 1738357200,
+        "endTime": 1745960400
+      },
+      "url": "https://app.galxe.com/quest/HILO/GChRntpBYZ"
+    },
+    {
+      "name": "Blueprint",
+      "alias": "Blueprint",
+      "category": "custom",
+      "latest": {
+        "id": "GCFLqtfH6f",
+        "name": "Blueprint Launch Challenge",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/Blueprint/GCFLqtfH6f"
+    },
+    {
+      "name": "Dig",
+      "alias": "Dig",
+      "category": "custom",
+      "latest": {
+        "id": "GC54Ut6Zpj",
+        "name": "How to Invest in Promising Tokens with Dig",
+        "createdAt": "",
+        "startTime": 1753221600,
+        "endTime": 1754431200
+      },
+      "url": "https://app.galxe.com/quest/Dig/GC54Ut6Zpj"
+    },
+    {
+      "name": "CoinCollect",
+      "alias": "CoinCollect",
+      "category": "custom",
+      "latest": {
+        "id": "GCcK8t8dyF",
+        "name": "Invite Link for First 50 Users: Play-To-Earn",
+        "createdAt": "",
+        "startTime": 1759479600,
+        "endTime": 1759611600
+      },
+      "url": "https://app.galxe.com/quest/CoinCollect/GCcK8t8dyF"
+    },
+    {
+      "name": "TakaraLend",
+      "alias": "TakaraLend",
+      "category": "custom",
+      "latest": {
+        "id": "GC85Wt6bt2",
+        "name": "💎Takara | Daily check-in",
+        "createdAt": "",
+        "startTime": 1755360000,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/TakaraLend/GC85Wt6bt2"
+    },
+    {
+      "name": "ethereumorg",
+      "alias": "ethereumorg",
+      "category": "custom",
+      "latest": {
+        "id": "GCyQ6t8tVA",
+        "name": "50,000 words translated - ethereum.org Translatathon 2025",
+        "createdAt": "",
+        "startTime": 1759269600,
+        "endTime": 1769814000
+      },
+      "url": "https://app.galxe.com/quest/ethereumorg/GCyQ6t8tVA"
+    },
+    {
+      "name": "AssembleProtocol",
+      "alias": "AssembleProtocol",
+      "category": "custom",
+      "latest": {
+        "id": "GCCSit87Af",
+        "name": "СhainGPT x Assemble AI: Integration Journey",
+        "createdAt": "",
+        "startTime": 1760986800,
+        "endTime": 1762196400
+      },
+      "url": "https://app.galxe.com/quest/AssembleProtocol/GCCSit87Af"
+    },
+    {
+      "name": "ForteProtocol",
+      "alias": "ForteProtocol",
+      "category": "custom",
+      "latest": {
+        "id": "GC5mTt8px6",
+        "name": "Quest 2: Spread the Word",
+        "createdAt": "",
+        "startTime": 1758137123,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/ForteProtocol/GC5mTt8px6"
+    },
+    {
+      "name": "RubiconStaking",
+      "alias": "RubiconStaking",
+      "category": "custom",
+      "latest": {
+        "id": "GCdSxt8fmJ",
+        "name": "DragonSwap Dives Into The Rubicon",
+        "createdAt": "",
+        "startTime": 1758600000,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/RubiconStaking/GCdSxt8fmJ"
+    },
+    {
+      "name": "daGama",
+      "alias": "daGama",
+      "category": "custom",
+      "latest": {
+        "id": "GCVBDtmxgL",
+        "name": "daGama Spring Festival #2",
+        "createdAt": "",
+        "startTime": 1747242300,
+        "endTime": 1749056700
+      },
+      "url": "https://app.galxe.com/quest/daGama/GCVBDtmxgL"
+    },
+    {
+      "name": "Irys",
+      "alias": "Irys",
+      "category": "custom",
+      "latest": {
+        "id": "GCePjt6XPE",
+        "name": "EnsoFi x Irys; Autumn Slam! Win $500 USDC and more from EnsoFi and Irys",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/Irys/GCePjt6XPE"
+    },
+    {
+      "name": "52plus1Capital",
+      "alias": "52plus1Capital",
+      "category": "custom",
+      "latest": {
+        "id": "GCWAzt8yZ9",
+        "name": "👉 First Citizens Wanted. Claim WL & shape the future of the Machine-City.",
+        "createdAt": "",
+        "startTime": 1758142800,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/52plus1Capital/GCWAzt8yZ9"
+    },
+    {
+      "name": "LEND",
+      "alias": "LEND",
+      "category": "custom",
+      "latest": {
+        "id": "GCduGtfzxG",
+        "name": "LEND X Sonic 1M LENDPoint Airdrop",
+        "createdAt": "",
+        "startTime": 1752793200,
+        "endTime": 1753484400
+      },
+      "url": "https://app.galxe.com/quest/LEND/GCduGtfzxG"
+    },
+    {
+      "name": "ZetaChain",
+      "alias": "ZetaChain",
+      "category": "custom",
+      "latest": {
+        "id": "GCY1HtTjug",
+        "name": "Phase 1: Mission Bring ZETA Home",
+        "createdAt": "",
+        "startTime": 1712019600,
+        "endTime": 1713153600
+      },
+      "url": "https://app.galxe.com/quest/ZetaChain/GCY1HtTjug"
+    },
+    {
+      "name": "Symbiotic",
+      "alias": "Symbiotic",
+      "category": "custom",
+      "latest": {
+        "id": "GCJHEt6mPq",
+        "name": "Summer of Symbiotic: Avail",
+        "createdAt": "",
+        "startTime": 1754802000,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/Symbiotic/GCJHEt6mPq"
+    },
+    {
+      "name": "Symphony",
+      "alias": "Symphony",
+      "category": "custom",
+      "latest": {
+        "id": "GCJENtmWNq",
+        "name": "The Symphony World Tour",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/Symphony/GCJENtmWNq"
+    },
+    {
+      "name": "vezonetwork",
+      "alias": "vezonetwork",
+      "category": "custom",
+      "latest": {
+        "id": "GCHurt6xHs",
+        "name": "Luminara Expeditions Day 1",
+        "createdAt": "",
+        "startTime": 1755986400,
+        "endTime": 1758664800
+      },
+      "url": "https://app.galxe.com/quest/vezonetwork/GCHurt6xHs"
+    },
+    {
+      "name": "Momentum",
+      "alias": "Momentum",
+      "category": "custom",
+      "latest": {
+        "id": "GC6vMtfa8d",
+        "name": "ZO x Momentum: Odyssey on Sui |$40,000 prize pool",
+        "createdAt": "",
+        "startTime": 1753282800,
+        "endTime": 1755874800
+      },
+      "url": "https://app.galxe.com/quest/Momentum/GC6vMtfa8d"
+    },
+    {
+      "name": "EleveX",
+      "alias": "EleveX",
+      "category": "custom",
+      "latest": {
+        "id": "GCYWTt6Let",
+        "name": "Elevex Daily",
+        "createdAt": "",
+        "startTime": 1753700400,
+        "endTime": 1753794000
+      },
+      "url": "https://app.galxe.com/quest/EleveX/GCYWTt6Let"
+    },
+    {
+      "name": "dolomite",
+      "alias": "dolomite",
+      "category": "custom",
+      "latest": {
+        "id": "GCcBJtfie3",
+        "name": "Share Town Hall Announcement",
+        "createdAt": "",
+        "startTime": 1753070400,
+        "endTime": 1753466400
+      },
+      "url": "https://app.galxe.com/quest/dolomite/GCcBJtfie3"
+    },
+    {
+      "name": "KiiChain",
+      "alias": "KiiChain",
+      "category": "custom",
+      "latest": {
+        "id": "GCdUit68sh",
+        "name": "Phase 2 launched, Let's celebrate 100,000 Discord How? 500$",
+        "createdAt": "",
+        "startTime": 1756270800,
+        "endTime": 1761541200
+      },
+      "url": "https://app.galxe.com/quest/KiiChain/GCdUit68sh"
+    },
+    {
+      "name": "DeLoreanLabs",
+      "alias": "DeLoreanLabs",
+      "category": "custom",
+      "latest": {
+        "id": "GC5mHtfGnY",
+        "name": "[Duplicated]DeLorean $DMC AirDrop Race - Voucher Redemption",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/DeLoreanLabs/GC5mHtfGnY"
+    },
+    {
+      "name": "Questfall",
+      "alias": "Questfall",
+      "category": "custom",
+      "latest": {
+        "id": "GC1w5t6Cm6",
+        "name": "Visit our Website",
+        "createdAt": "",
+        "startTime": 1755590847,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/Questfall/GC1w5t6Cm6"
+    },
+    {
+      "name": "GiantsProtocol",
+      "alias": "GiantsProtocol",
+      "category": "custom",
+      "latest": {
+        "id": "GCqX8t6fKB",
+        "name": "Join our Giants Protocol Telegram Channel",
+        "createdAt": "",
+        "startTime": 1755705600,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/GiantsProtocol/GCqX8t6fKB"
+    },
+    {
+      "name": "PlumeNetwork",
+      "alias": "PlumeNetwork",
+      "category": "custom",
+      "latest": {
+        "id": "GCDfjt6f6T",
+        "name": "What Should We Tokenize - RWA in Your City",
+        "createdAt": "",
+        "startTime": 1755583200,
+        "endTime": 1756738800
+      },
+      "url": "https://app.galxe.com/quest/PlumeNetwork/GCDfjt6f6T"
+    },
+    {
+      "name": "NemoProtocol",
+      "alias": "NemoProtocol",
+      "category": "custom",
+      "latest": {
+        "id": "GCoYPtf7tx",
+        "name": "Nemo x Momentum Vault Beta Test Campaign is LIVE!",
+        "createdAt": "",
+        "startTime": null,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/NemoProtocol/GCoYPtf7tx"
+    },
+    {
+      "name": "zeusnetwork",
+      "alias": "zeusnetwork",
+      "category": "custom",
+      "latest": {
+        "id": "GCMhqtfYWP",
+        "name": "Learn more about how Starboard works!",
+        "createdAt": "",
+        "startTime": 1752681600,
+        "endTime": 1758643199
+      },
+      "url": "https://app.galxe.com/quest/zeusnetwork/GCMhqtfYWP"
+    },
+    {
+      "name": "ZypherNetwork",
+      "alias": "ZypherNetwork",
+      "category": "custom",
+      "latest": {
+        "id": "GCuKHtfB6g",
+        "name": "Zypher Odyssey -  G NFT Giveaway",
+        "createdAt": "",
+        "startTime": 1752105600,
+        "endTime": 1753286399
+      },
+      "url": "https://app.galxe.com/quest/ZypherNetwork/GCuKHtfB6g"
+    },
+    {
+      "name": "Pilot",
+      "alias": "Pilot",
+      "category": "custom",
+      "latest": {
+        "id": "GCWEMtfZYH",
+        "name": "Follow Pilot on X",
+        "createdAt": "",
+        "startTime": 1753135200,
+        "endTime": null
+      },
+      "url": "https://app.galxe.com/quest/Pilot/GCWEMtfZYH"
+    },
+    {
+      "name": "HelixLabs",
+      "alias": "HelixLabs",
+      "category": "custom",
+      "latest": {
+        "id": "GCBzrtpCzU",
+        "name": "Testnet Waitlist Quest",
+        "createdAt": "",
+        "startTime": 1740940200,
+        "endTime": 1742581800
+      },
+      "url": "https://app.galxe.com/quest/HelixLabs/GCBzrtpCzU"
+    }
+  ]
+}

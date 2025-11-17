@@ -1,0 +1,1190 @@
+{
+  "webui_port": 5001,
+  "webui_password": "admin",
+  "projects": [
+    {
+      "name": "BNB Chain",
+      "alias": "bnbchain",
+      "category": "trending"
+    },
+    {
+      "name": "Galxe Official",
+      "alias": "Galxe",
+      "category": "trending"
+    },
+    {
+      "name": "OKX Web3",
+      "alias": "okxweb3",
+      "category": "trending"
+    },
+    {
+      "name": "Zaiffer Quest",
+      "alias": "Zaiffer",
+      "category": "trending"
+    },
+    {
+      "name": "Arbitrum",
+      "alias": "arbitrum",
+      "category": "trending"
+    },
+    {
+      "name": "Optimism",
+      "alias": "optimism",
+      "category": "trending"
+    },
+    {
+      "name": "Base",
+      "alias": "base",
+      "category": "trending"
+    },
+    {
+      "name": "Linea",
+      "alias": "linea",
+      "category": "trending"
+    },
+    {
+      "name": "zkSync",
+      "alias": "zksync",
+      "category": "trending"
+    },
+    {
+      "name": "Scroll",
+      "alias": "scroll",
+      "category": "trending"
+    },
+    {
+      "name": "Taiko",
+      "alias": "taiko",
+      "category": "trending"
+    },
+    {
+      "name": "Blast",
+      "alias": "blast",
+      "category": "trending"
+    },
+    {
+      "name": "Mantle",
+      "alias": "mantle",
+      "category": "trending"
+    },
+    {
+      "name": "Starknet",
+      "alias": "starknet",
+      "category": "trending"
+    },
+    {
+      "name": "Polygon",
+      "alias": "polygon",
+      "category": "trending"
+    },
+    {
+      "name": "Avalanche",
+      "alias": "avax",
+      "category": "trending"
+    },
+    {
+      "name": "Fantom",
+      "alias": "fantom",
+      "category": "trending"
+    },
+    {
+      "name": "CoreDAO",
+      "alias": "coredao",
+      "category": "trending"
+    },
+    {
+      "name": "Merlin Chain",
+      "alias": "merlin",
+      "category": "trending"
+    },
+    {
+      "name": "Manta Network",
+      "alias": "manta",
+      "category": "trending"
+    },
+    {
+      "name": "Zircuit",
+      "alias": "zircuit",
+      "category": "trending"
+    },
+    {
+      "name": "Mode Network",
+      "alias": "mode",
+      "category": "trending"
+    },
+    {
+      "name": "Sei Network",
+      "alias": "sei",
+      "category": "trending"
+    },
+    {
+      "name": "Celestia",
+      "alias": "celestia",
+      "category": "trending"
+    },
+    {
+      "name": "Injective",
+      "alias": "injective",
+      "category": "trending"
+    },
+    {
+      "name": "Berachain",
+      "alias": "berachain",
+      "category": "trending"
+    },
+    {
+      "name": "ZKFair",
+      "alias": "zkfair",
+      "category": "trending"
+    },
+    {
+      "name": "Mantle L2",
+      "alias": "mantleL2",
+      "category": "trending"
+    },
+    {
+      "name": "Aptos",
+      "alias": "aptos",
+      "category": "trending"
+    },
+    {
+      "name": "Sui",
+      "alias": "sui",
+      "category": "trending"
+    },
+    {
+      "name": "Solana",
+      "alias": "solana",
+      "category": "trending"
+    },
+    {
+      "name": "TON",
+      "alias": "ton",
+      "category": "trending"
+    },
+    {
+      "name": "Near Protocol",
+      "alias": "near",
+      "category": "trending"
+    },
+    {
+      "name": "Cosmos Hub",
+      "alias": "cosmos",
+      "category": "trending"
+    },
+    {
+      "name": "Kava",
+      "alias": "kava",
+      "category": "trending"
+    },
+    {
+      "name": "Celo",
+      "alias": "celo",
+      "category": "trending"
+    },
+    {
+      "name": "Conflux",
+      "alias": "conflux",
+      "category": "trending"
+    },
+    {
+      "name": "Binance Web3 Wallet",
+      "alias": "binanceweb3",
+      "category": "trending"
+    },
+    {
+      "name": "OKX Wallet",
+      "alias": "okxwallet",
+      "category": "trending"
+    },
+    {
+      "name": "Bitget Wallet",
+      "alias": "bitgetwallet",
+      "category": "trending"
+    },
+    {
+      "name": "Bybit Web3",
+      "alias": "bybitweb3",
+      "category": "trending"
+    },
+    {
+      "name": "Gate Web3",
+      "alias": "gateio",
+      "category": "trending"
+    },
+    {
+      "name": "KuCoin Web3",
+      "alias": "kucoin",
+      "category": "trending"
+    },
+    {
+      "name": "MEXC",
+      "alias": "mexc",
+      "category": "trending"
+    },
+    {
+      "name": "BingX",
+      "alias": "bingx",
+      "category": "trending"
+    },
+    {
+      "name": "Uniswap",
+      "alias": "uniswap",
+      "category": "trending"
+    },
+    {
+      "name": "PancakeSwap",
+      "alias": "pancakeswap",
+      "category": "trending"
+    },
+    {
+      "name": "Curve Finance",
+      "alias": "curve",
+      "category": "trending"
+    },
+    {
+      "name": "Balancer",
+      "alias": "balancer",
+      "category": "trending"
+    },
+    {
+      "name": "Aave",
+      "alias": "aave",
+      "category": "trending"
+    },
+    {
+      "name": "Compound",
+      "alias": "compound",
+      "category": "trending"
+    },
+    {
+      "name": "MakerDAO",
+      "alias": "makerdao",
+      "category": "trending"
+    },
+    {
+      "name": "Lido",
+      "alias": "lido",
+      "category": "trending"
+    },
+    {
+      "name": "Rocket Pool",
+      "alias": "rocketpool",
+      "category": "trending"
+    },
+    {
+      "name": "Pendle",
+      "alias": "pendle",
+      "category": "trending"
+    },
+    {
+      "name": "EigenLayer",
+      "alias": "eigenlayer",
+      "category": "trending"
+    },
+    {
+      "name": "Ethena",
+      "alias": "ethena",
+      "category": "trending"
+    },
+    {
+      "name": "Blast DeFi",
+      "alias": "blastdefi",
+      "category": "trending"
+    },
+    {
+      "name": "ZKLend",
+      "alias": "zklend",
+      "category": "trending"
+    },
+    {
+      "name": "Morpho",
+      "alias": "morpho",
+      "category": "trending"
+    },
+    {
+      "name": "Pendle Ecosystem",
+      "alias": "pendleeco",
+      "category": "trending"
+    },
+    {
+      "name": "CyberConnect",
+      "alias": "cyberconnect",
+      "category": "trending"
+    },
+    {
+      "name": "Lens Protocol",
+      "alias": "lensprotocol",
+      "category": "trending"
+    },
+    {
+      "name": "Farcaster",
+      "alias": "farcaster",
+      "category": "trending"
+    },
+    {
+      "name": "Friend.tech",
+      "alias": "friendtech",
+      "category": "trending"
+    },
+    {
+      "name": "Galxe OAT Ecosystem",
+      "alias": "galxeoat",
+      "category": "trending"
+    },
+    {
+      "name": "Arbitrum Ecosystem",
+      "alias": "arbitrumeco",
+      "category": "trending"
+    },
+    {
+      "name": "Optimism Quests",
+      "alias": "optimismquest",
+      "category": "trending"
+    },
+    {
+      "name": "Linea Voyage",
+      "alias": "lineavoyage",
+      "category": "trending"
+    },
+    {
+      "name": "Base Quests",
+      "alias": "basequest",
+      "category": "trending"
+    },
+    {
+      "name": "Scroll Quests",
+      "alias": "scrollquest",
+      "category": "trending"
+    },
+    {
+      "name": "Taiko Quests",
+      "alias": "taikoquest",
+      "category": "trending"
+    },
+    {
+      "name": "zkSync Era",
+      "alias": "zksyncera",
+      "category": "trending"
+    },
+    {
+      "name": "Starknet Quest",
+      "alias": "starknetquest",
+      "category": "trending"
+    },
+    {
+      "name": "Blast Points",
+      "alias": "blastpoints",
+      "category": "trending"
+    },
+    {
+      "name": "Mode Points",
+      "alias": "modepoints",
+      "category": "trending"
+    },
+    {
+      "name": "Merlin Points",
+      "alias": "merlinpoints",
+      "category": "trending"
+    },
+    {
+      "name": "Xai Gaming",
+      "alias": "xai",
+      "category": "trending"
+    },
+    {
+      "name": "Pixels Online",
+      "alias": "pixels",
+      "category": "trending"
+    },
+    {
+      "name": "Immutable X",
+      "alias": "immutablex",
+      "category": "trending"
+    },
+    {
+      "name": "Ronin Network",
+      "alias": "ronin",
+      "category": "trending"
+    },
+    {
+      "name": "ApeCoin",
+      "alias": "apecoin",
+      "category": "trending"
+    },
+    {
+      "name": "STEPN",
+      "alias": "stepn",
+      "category": "trending"
+    },
+    {
+      "name": "Big Time",
+      "alias": "bigtime",
+      "category": "trending"
+    },
+    {
+      "name": "Illuvium",
+      "alias": "illuvium",
+      "category": "trending"
+    },
+    {
+      "name": "LayerZero",
+      "alias": "layerzero",
+      "category": "trending"
+    },
+    {
+      "name": "Stargate",
+      "alias": "stargate",
+      "category": "trending"
+    },
+    {
+      "name": "Wormhole",
+      "alias": "wormhole",
+      "category": "trending"
+    },
+    {
+      "name": "Axelar",
+      "alias": "axelar",
+      "category": "trending"
+    },
+    {
+      "name": "Orbiter Finance",
+      "alias": "orbiter",
+      "category": "trending"
+    },
+    {
+      "name": "deBridge",
+      "alias": "debridge",
+      "category": "trending"
+    },
+    {
+      "name": "1inch",
+      "alias": "1inch",
+      "category": "trending"
+    },
+    {
+      "name": "dYdX",
+      "alias": "dydx",
+      "category": "trending"
+    },
+    {
+      "name": "GMX",
+      "alias": "gmx",
+      "category": "trending"
+    },
+    {
+      "name": "Hyperliquid",
+      "alias": "hyperliquid",
+      "category": "trending"
+    },
+    {
+      "name": "Kwenta",
+      "alias": "kwenta",
+      "category": "trending"
+    },
+    {
+      "name": "Galxe Campaign Hub",
+      "alias": "galxecampaigns",
+      "category": "trending"
+    },
+    {
+      "name": "Ethereum Foundation",
+      "alias": "ethereum",
+      "category": "trending"
+    },
+    {
+      "name": "Bitcoin Ecosystem",
+      "alias": "bitcoin",
+      "category": "trending"
+    },
+    {
+      "name": "Curve Ecosystem",
+      "alias": "curveeco",
+      "category": "trending"
+    },
+    {
+      "name": "Lido stETH",
+      "alias": "steth",
+      "category": "trending"
+    },
+    {
+      "name": "Pendle LRT",
+      "alias": "pendlelrt",
+      "category": "trending"
+    },
+    {
+      "name": "EigenLayer Restaking",
+      "alias": "restaking",
+      "category": "trending"
+    },
+    {
+      "name": "Linea zkEVM",
+      "alias": "lineazkevm",
+      "category": "trending"
+    },
+    {
+      "name": "Polygon zkEVM",
+      "alias": "polygonzkevm",
+      "category": "trending"
+    },
+    {
+      "name": "Scroll zkEVM",
+      "alias": "scrollzkevm",
+      "category": "trending"
+    },
+    {
+      "name": "Taiko zkRollup",
+      "alias": "taikozk",
+      "category": "trending"
+    },
+    {
+      "name": "zkSync Lite",
+      "alias": "zksynclite",
+      "category": "trending"
+    },
+    {
+      "name": "Arbitrum Nitro",
+      "alias": "arbitrumone",
+      "category": "trending"
+    },
+    {
+      "name": "Optimism Mainnet",
+      "alias": "optimismmainnet",
+      "category": "trending"
+    },
+    {
+      "name": "Base Mainnet",
+      "alias": "basemainnet",
+      "category": "trending"
+    },
+    {
+      "name": "Blast Mainnet",
+      "alias": "blastmainnet",
+      "category": "trending"
+    },
+    {
+      "name": "Synthetix",
+      "alias": "synthetix",
+      "category": "trending"
+    },
+    {
+      "name": "GMX Arbitrum",
+      "alias": "gmxarbitrum",
+      "category": "trending"
+    },
+    {
+      "name": "Radiant Capital",
+      "alias": "radiant",
+      "category": "trending"
+    },
+    {
+      "name": "Camelot DEX",
+      "alias": "camelot",
+      "category": "trending"
+    },
+    {
+      "name": "Lyra Finance",
+      "alias": "lyra",
+      "category": "trending"
+    },
+    {
+      "name": "Paraswap",
+      "alias": "paraswap",
+      "category": "trending"
+    },
+    {
+      "name": "Hashflow",
+      "alias": "hashflow",
+      "category": "trending"
+    },
+    {
+      "name": "OpenOcean",
+      "alias": "openocean",
+      "category": "trending"
+    },
+    {
+      "name": "Galxe Starter Quests",
+      "alias": "galxestarter",
+      "category": "trending"
+    },
+    {
+      "name": "Web3 Gaming Hub",
+      "alias": "web3gaminghub",
+      "category": "trending"
+    },
+    {
+      "name": "NFT Bluechip Hub",
+      "alias": "nftbluechip",
+      "category": "trending"
+    },
+    {
+      "name": "DeFi Bluechip Hub",
+      "alias": "defibluechip",
+      "category": "trending"
+    },
+    {
+      "name": "TeahouseFinance",
+      "alias": "TeahouseFinance",
+      "category": "custom"
+    },
+    {
+      "name": "Colb",
+      "alias": "Colb",
+      "category": "custom"
+    },
+    {
+      "name": "Colb",
+      "alias": "Colb",
+      "category": "custom"
+    },
+    {
+      "name": "NOFA.AI",
+      "alias": "NOFA.AI",
+      "category": "custom"
+    },
+    {
+      "name": "hanchain",
+      "alias": "hanchain",
+      "category": "custom"
+    },
+    {
+      "name": "XTExchange",
+      "alias": "XTExchange",
+      "category": "custom"
+    },
+    {
+      "name": "DittoLabs",
+      "alias": "DittoLabs",
+      "category": "custom"
+    },
+    {
+      "name": "GAIB",
+      "alias": "GAIB",
+      "category": "custom"
+    },
+    {
+      "name": "Permission",
+      "alias": "Permission",
+      "category": "custom"
+    },
+    {
+      "name": "SynaplogicAI",
+      "alias": "SynaplogicAI",
+      "category": "custom"
+    },
+    {
+      "name": "Swap.io",
+      "alias": "Swap.io",
+      "category": "custom"
+    },
+    {
+      "name": "Kommunitas",
+      "alias": "Kommunitas",
+      "category": "custom"
+    },
+    {
+      "name": "MiniDapp",
+      "alias": "MiniDapp",
+      "category": "custom"
+    },
+    {
+      "name": "cplx.io",
+      "alias": "cplx.io",
+      "category": "custom"
+    },
+    {
+      "name": "CityProtocol",
+      "alias": "CityProtocol",
+      "category": "custom"
+    },
+    {
+      "name": "mememarket",
+      "alias": "mememarket",
+      "category": "custom"
+    },
+    {
+      "name": "Galxe",
+      "alias": "Galxe",
+      "category": "custom"
+    },
+    {
+      "name": "GameonWorld",
+      "alias": "GameonWorld",
+      "category": "custom"
+    },
+    {
+      "name": "GlobalDollarNetwork",
+      "alias": "GlobalDollarNetwork",
+      "category": "custom"
+    },
+    {
+      "name": "InterlinkLabs",
+      "alias": "InterlinkLabs",
+      "category": "custom"
+    },
+    {
+      "name": "MILK",
+      "alias": "MILK",
+      "category": "custom"
+    },
+    {
+      "name": "GAM3Sgg",
+      "alias": "GAM3Sgg",
+      "category": "custom"
+    },
+    {
+      "name": "AGNTHub",
+      "alias": "AGNTHub",
+      "category": "custom"
+    },
+    {
+      "name": "MonacoProtocol",
+      "alias": "MonacoProtocol",
+      "category": "custom"
+    },
+    {
+      "name": "x1ecochain",
+      "alias": "x1ecochain",
+      "category": "custom"
+    },
+    {
+      "name": "WheelX.fi",
+      "alias": "WheelX.fi",
+      "category": "custom"
+    },
+    {
+      "name": "NEUSNetwork",
+      "alias": "NEUSNetwork",
+      "category": "custom"
+    },
+    {
+      "name": "securedfi",
+      "alias": "securedfi",
+      "category": "custom"
+    },
+    {
+      "name": "yala",
+      "alias": "yala",
+      "category": "custom"
+    },
+    {
+      "name": "OrioleInsights",
+      "alias": "OrioleInsights",
+      "category": "custom"
+    },
+    {
+      "name": "Rumi",
+      "alias": "Rumi",
+      "category": "custom"
+    },
+    {
+      "name": "GONAD_ON_MONAD",
+      "alias": "GONAD_ON_MONAD",
+      "category": "custom"
+    },
+    {
+      "name": "spaceid",
+      "alias": "spaceid",
+      "category": "custom"
+    },
+    {
+      "name": "LiveArt",
+      "alias": "LiveArt",
+      "category": "custom"
+    },
+    {
+      "name": "EnsoFi",
+      "alias": "EnsoFi",
+      "category": "custom"
+    },
+    {
+      "name": "TurbineFinance",
+      "alias": "TurbineFinance",
+      "category": "custom"
+    },
+    {
+      "name": "OSL",
+      "alias": "OSL",
+      "category": "custom"
+    },
+    {
+      "name": "Moso",
+      "alias": "Moso",
+      "category": "custom"
+    },
+    {
+      "name": "PACT",
+      "alias": "PACT",
+      "category": "custom"
+    },
+    {
+      "name": "Whiffin",
+      "alias": "Whiffin",
+      "category": "custom"
+    },
+    {
+      "name": "sachi",
+      "alias": "sachi",
+      "category": "custom"
+    },
+    {
+      "name": "Piggycell",
+      "alias": "Piggycell",
+      "category": "custom"
+    },
+    {
+      "name": "Sei",
+      "alias": "Sei",
+      "category": "custom"
+    },
+    {
+      "name": "SolanaGaming",
+      "alias": "SolanaGaming",
+      "category": "custom"
+    },
+    {
+      "name": "DeFihubfi",
+      "alias": "DeFihubfi",
+      "category": "custom"
+    },
+    {
+      "name": "Fuglys",
+      "alias": "Fuglys",
+      "category": "custom"
+    },
+    {
+      "name": "mantle",
+      "alias": "mantle",
+      "category": "custom"
+    },
+    {
+      "name": "D3LTA_Army",
+      "alias": "D3LTA_Army",
+      "category": "custom"
+    },
+    {
+      "name": "haiku.trade",
+      "alias": "haiku.trade",
+      "category": "custom"
+    },
+    {
+      "name": "LineupGames",
+      "alias": "LineupGames",
+      "category": "custom"
+    },
+    {
+      "name": "Astrolology",
+      "alias": "Astrolology",
+      "category": "custom"
+    },
+    {
+      "name": "Botanix",
+      "alias": "Botanix",
+      "category": "custom"
+    },
+    {
+      "name": "EarnOS",
+      "alias": "EarnOS",
+      "category": "custom"
+    },
+    {
+      "name": "perspectiveai",
+      "alias": "perspectiveai",
+      "category": "custom"
+    },
+    {
+      "name": "gamblr",
+      "alias": "gamblr",
+      "category": "custom"
+    },
+    {
+      "name": "re",
+      "alias": "re",
+      "category": "custom"
+    },
+    {
+      "name": "xstar",
+      "alias": "xstar",
+      "category": "custom"
+    },
+    {
+      "name": "Orbler",
+      "alias": "Orbler",
+      "category": "custom"
+    },
+    {
+      "name": "BenFen",
+      "alias": "BenFen",
+      "category": "custom"
+    },
+    {
+      "name": "PinAI",
+      "alias": "PinAI",
+      "category": "custom"
+    },
+    {
+      "name": "NatixNetwork",
+      "alias": "NatixNetwork",
+      "category": "custom"
+    },
+    {
+      "name": "glue",
+      "alias": "glue",
+      "category": "custom"
+    },
+    {
+      "name": "caliverse",
+      "alias": "caliverse",
+      "category": "custom"
+    },
+    {
+      "name": "lawyerd",
+      "alias": "lawyerd",
+      "category": "custom"
+    },
+    {
+      "name": "nebulafi",
+      "alias": "nebulafi",
+      "category": "custom"
+    },
+    {
+      "name": "EcoYield",
+      "alias": "EcoYield",
+      "category": "custom"
+    },
+    {
+      "name": "Enigma",
+      "alias": "Enigma",
+      "category": "custom"
+    },
+    {
+      "name": "KarrierOne",
+      "alias": "KarrierOne",
+      "category": "custom"
+    },
+    {
+      "name": "Lendxyz",
+      "alias": "Lendxyz",
+      "category": "custom"
+    },
+    {
+      "name": "Ambercoin",
+      "alias": "Ambercoin",
+      "category": "custom"
+    },
+    {
+      "name": "Rails",
+      "alias": "Rails",
+      "category": "custom"
+    },
+    {
+      "name": "dabbanetwork",
+      "alias": "dabbanetwork",
+      "category": "custom"
+    },
+    {
+      "name": "ChimpxAI",
+      "alias": "ChimpxAI",
+      "category": "custom"
+    },
+    {
+      "name": "Fortuva",
+      "alias": "Fortuva",
+      "category": "custom"
+    },
+    {
+      "name": "zofinance",
+      "alias": "zofinance",
+      "category": "custom"
+    },
+    {
+      "name": "theo",
+      "alias": "theo",
+      "category": "custom"
+    },
+    {
+      "name": "Algorand",
+      "alias": "Algorand",
+      "category": "custom"
+    },
+    {
+      "name": "nibiruchain",
+      "alias": "nibiruchain",
+      "category": "custom"
+    },
+    {
+      "name": "Threshold",
+      "alias": "Threshold",
+      "category": "custom"
+    },
+    {
+      "name": "zkCandy",
+      "alias": "zkCandy",
+      "category": "custom"
+    },
+    {
+      "name": "xyo",
+      "alias": "xyo",
+      "category": "custom"
+    },
+    {
+      "name": "defichoice",
+      "alias": "defichoice",
+      "category": "custom"
+    },
+    {
+      "name": "HILO",
+      "alias": "HILO",
+      "category": "custom"
+    },
+    {
+      "name": "Blueprint",
+      "alias": "Blueprint",
+      "category": "custom"
+    },
+    {
+      "name": "Dig",
+      "alias": "Dig",
+      "category": "custom"
+    },
+    {
+      "name": "CoinCollect",
+      "alias": "CoinCollect",
+      "category": "custom"
+    },
+    {
+      "name": "TakaraLend",
+      "alias": "TakaraLend",
+      "category": "custom"
+    },
+    {
+      "name": "ethereumorg",
+      "alias": "ethereumorg",
+      "category": "custom"
+    },
+    {
+      "name": "AssembleProtocol",
+      "alias": "AssembleProtocol",
+      "category": "custom"
+    },
+    {
+      "name": "ForteProtocol",
+      "alias": "ForteProtocol",
+      "category": "custom"
+    },
+    {
+      "name": "RubiconStaking",
+      "alias": "RubiconStaking",
+      "category": "custom"
+    },
+    {
+      "name": "daGama",
+      "alias": "daGama",
+      "category": "custom"
+    },
+    {
+      "name": "Irys",
+      "alias": "Irys",
+      "category": "custom"
+    },
+    {
+      "name": "52plus1Capital",
+      "alias": "52plus1Capital",
+      "category": "custom"
+    },
+    {
+      "name": "LEND",
+      "alias": "LEND",
+      "category": "custom"
+    },
+    {
+      "name": "ZetaChain",
+      "alias": "ZetaChain",
+      "category": "custom"
+    },
+    {
+      "name": "Symbiotic",
+      "alias": "Symbiotic",
+      "category": "custom"
+    },
+    {
+      "name": "Symphony",
+      "alias": "Symphony",
+      "category": "custom"
+    },
+    {
+      "name": "vezonetwork",
+      "alias": "vezonetwork",
+      "category": "custom"
+    },
+    {
+      "name": "Momentum",
+      "alias": "Momentum",
+      "category": "custom"
+    },
+    {
+      "name": "EleveX",
+      "alias": "EleveX",
+      "category": "custom"
+    },
+    {
+      "name": "dolomite",
+      "alias": "dolomite",
+      "category": "custom"
+    },
+    {
+      "name": "KiiChain",
+      "alias": "KiiChain",
+      "category": "custom"
+    },
+    {
+      "name": "DeLoreanLabs",
+      "alias": "DeLoreanLabs",
+      "category": "custom"
+    },
+    {
+      "name": "Questfall",
+      "alias": "Questfall",
+      "category": "custom"
+    },
+    {
+      "name": "GiantsProtocol",
+      "alias": "GiantsProtocol",
+      "category": "custom"
+    },
+    {
+      "name": "PlumeNetwork",
+      "alias": "PlumeNetwork",
+      "category": "custom"
+    },
+    {
+      "name": "NemoProtocol",
+      "alias": "NemoProtocol",
+      "category": "custom"
+    },
+    {
+      "name": "zeusnetwork",
+      "alias": "zeusnetwork",
+      "category": "custom"
+    },
+    {
+      "name": "ZypherNetwork",
+      "alias": "ZypherNetwork",
+      "category": "custom"
+    },
+    {
+      "name": "Pilot",
+      "alias": "Pilot",
+      "category": "custom"
+    },
+    {
+      "name": "HelixLabs",
+      "alias": "HelixLabs",
+      "category": "custom"
+    }
+  ],
+  "notify_method": "telegram",
+  "telegram_bot_token": "8331180504:AAFU-JyITKlfH7mvqrz5tspcvS2VTseW0yI",
+  "telegram_chat_id": "@NexTradeDao_bot",
+  "discord_webhook_url": ""
+}
