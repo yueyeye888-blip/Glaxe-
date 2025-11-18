@@ -395,8 +395,6 @@ def build_notify_text(project_name: str, alias: str, latest: Dict, url: Optional
 ⏰ 结束: {end}
 
 🔗 <a href="{url}">立即参与</a>
-━━━━━━━━━━━━━━━━━━
-⚡ 自动推送 | 监控236个项目
     """.strip()
     
     return message
