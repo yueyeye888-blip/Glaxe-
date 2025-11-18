@@ -1,0 +1,29 @@
+{
+  "webui_port": 5001,
+  "webui_password": "admin",
+  "notify_method": "telegram",
+  "notify_targets": [
+    {
+      "name": "测试1群组(全部项目)",
+      "bot_token": "8331180504:AAFU-JyITKlfH7mvqrz5tspcvS2VTseW0yI",
+      "chat_id": "-1002512291367",
+      "enabled": true,
+      "projects": []
+    }
+  ],
+  "telegram_bot_token": "8331180504:AAFU-JyITKlfH7mvqrz5tspcvS2VTseW0yI",
+  "telegram_chat_id": "-1002512291367",
+  "discord_webhook_url": "",
+  "projects": [
+    {
+      "name": "BNB Chain",
+      "alias": "bnbchain",
+      "category": "trending"
+    },
+    {
+      "name": "Galxe Official",
+      "alias": "Galxe",
+      "category": "trending"
+    }
+  ]
+}

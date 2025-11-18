@@ -400,15 +400,8 @@ def build_notify_text(project_name: str, alias: str, latest: Dict, url: Optional
     return message
 
 
-def send_telegram(cfg: dict, text: str):
-    """发送 Telegram 通知"""
-    token = cfg.get("telegram_bot_token") or ""
-    chat_id = cfg.get("telegram_chat_id") or ""
-    
-    if not token or not chat_id:
-        logger.warning("Telegram 配置不完整,跳过推送")
-        return
-    
+def send_telegram_to_target(token: str, chat_id: str, text: str) -> bool:
+    """发送消息到指定的Telegram目标"""
     try:
         url = f"https://api.telegram.org/bot{token}/sendMessage"
         payload = {
@@ -421,12 +414,52 @@ def send_telegram(cfg: dict, text: str):
         
         if response.status_code == 200:
             logger.info(f"✅ Telegram 通知已发送到 {chat_id}")
+            return True
         else:
             error_msg = response.json().get("description", "未知错误")
             logger.error(f"❌ Telegram 推送失败 [{response.status_code}]: {error_msg}")
             logger.error(f"   Chat ID: {chat_id}")
+            return False
     except Exception as e:
         logger.error(f"❌ Telegram 推送异常: {e}")
+        return False
+
+
+def send_telegram(cfg: dict, text: str, project_alias: str = None):
+    """发送 Telegram 通知(支持多Bot多群组)"""
+    # 获取通知目标列表
+    notify_targets = cfg.get("notify_targets", [])
+    
+    # 如果没有配置notify_targets,使用旧的单一配置(向后兼容)
+    if not notify_targets:
+        token = cfg.get("telegram_bot_token") or ""
+        chat_id = cfg.get("telegram_chat_id") or ""
+        if token and chat_id:
+            send_telegram_to_target(token, chat_id, text)
+        return
+    
+    # 遍历所有通知目标
+    sent_count = 0
+    for target in notify_targets:
+        # 检查是否启用
+        if not target.get("enabled", True):
+            continue
+        
+        # 检查项目过滤(如果指定了projects列表)
+        target_projects = target.get("projects", [])
+        if target_projects and project_alias:
+            if project_alias not in target_projects:
+                continue
+        
+        token = target.get("bot_token")
+        chat_id = target.get("chat_id")
+        
+        if token and chat_id:
+            if send_telegram_to_target(token, chat_id, text):
+                sent_count += 1
+    
+    if sent_count > 0:
+        logger.info(f"📤 共推送到 {sent_count} 个目标")
 
 
 def send_discord(cfg: dict, text: str):
@@ -505,7 +538,7 @@ def send_notifications(cfg: dict, project_name: str, alias: str, latest: Dict, u
     text = build_notify_text(project_name, alias, latest, url)
     
     if method in ("telegram", "both"):
-        send_telegram(cfg, text)
+        send_telegram(cfg, text, alias)
     if method in ("discord", "both"):
         send_discord(cfg, text)
 
@@ -1341,7 +1374,7 @@ def notify_test():
     text = "【NTX Quest Radar】这是一条测试通知，用于验证 Telegram / Discord 配置是否正常。"
     
     if method in ("telegram", "both"):
-        send_telegram(cfg, text)
+        send_telegram(cfg, text, None)
     if method in ("discord", "both"):
         send_discord(cfg, text)
     

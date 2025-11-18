@@ -1,75 +1,92 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-测试Telegram通知功能
+测试 Telegram 通知功能(支持多Bot多群组)
 """
 
 import sys
-import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+from pathlib import Path
 
-from app import send_telegram, build_notify_text, load_config
+# 添加 src 目录到 Python 路径
+sys.path.insert(0, str(Path(__file__).parent / "src"))
+
+from app import send_telegram, load_config, build_notify_text
 from datetime import datetime, timedelta
 
-def test_notification(chat_id=None):
-    """发送测试通知"""
+
+def test_notification():
+    """测试多种状态的通知"""
     cfg = load_config()
     
-    # 如果提供了chat_id则更新配置
-    if chat_id:
-        cfg['telegram_chat_id'] = chat_id
-        print(f"📝 使用 Chat ID: {chat_id}")
+    # 检查配置
+    notify_targets = cfg.get("notify_targets", [])
+    old_token = cfg.get("telegram_bot_token")
+    old_chat_id = cfg.get("telegram_chat_id")
     
-    # 模拟3种不同状态的活动
-    test_cases = [
-        {
-            "name": "测试项目 - 未开始",
-            "alias": "test-upcoming",
-            "latest": {
-                "name": "春季任务大礼包",
-                "startTime": str(int((datetime.now() + timedelta(days=1)).timestamp() * 1000)),
-                "endTime": str(int((datetime.now() + timedelta(days=30)).timestamp() * 1000)),
-            },
-            "url": "https://app.galxe.com/quest/test/GC123"
-        },
-        {
-            "name": "测试项目 - 进行中",
-            "alias": "test-ongoing",
-            "latest": {
-                "name": "每日签到任务",
-                "startTime": str(int((datetime.now() - timedelta(days=1)).timestamp() * 1000)),
-                "endTime": str(int((datetime.now() + timedelta(days=15)).timestamp() * 1000)),
-            },
-            "url": "https://app.galxe.com/quest/test/GC456"
-        },
-        {
-            "name": "测试项目 - 即将结束",
-            "alias": "test-ending",
-            "latest": {
-                "name": "限时冲刺活动",
-                "startTime": str(int((datetime.now() - timedelta(days=10)).timestamp() * 1000)),
-                "endTime": str(int((datetime.now() + timedelta(days=2)).timestamp() * 1000)),
-            },
-            "url": "https://app.galxe.com/quest/test/GC789"
-        }
-    ]
+    if not notify_targets and not (old_token and old_chat_id):
+        print("❌ 未配置Telegram通知目标")
+        print("请在config.json中配置 notify_targets 或 telegram_bot_token/telegram_chat_id")
+        return
     
-    print("=" * 60)
-    print("📤 开始发送测试通知...")
-    print("=" * 60)
+    if notify_targets:
+        print(f"📋 配置了 {len(notify_targets)} 个通知目标:")
+        for i, target in enumerate(notify_targets, 1):
+            name = target.get("name", f"目标{i}")
+            enabled = target.get("enabled", True)
+            chat_id = target.get("chat_id", "")
+            projects = target.get("projects", [])
+            status = "✅" if enabled else "❌"
+            
+            print(f"  {status} [{i}] {name} -> {chat_id}")
+            if projects:
+                print(f"       项目过滤: {', '.join(projects)}")
+            else:
+                print(f"       项目过滤: 全部")
+    else:
+        print(f"📋 使用旧配置: {old_chat_id}")
     
-    for i, test in enumerate(test_cases, 1):
-        print(f"\n[{i}/3] 发送: {test['name']}")
-        text = build_notify_text(test['name'], test['alias'], test['latest'], test['url'])
-        send_telegram(cfg, text)
-        print("✅ 已发送")
+    print("\n开始测试...")
+    print("=" * 50)
     
-    print("\n" + "=" * 60)
+    # 测试用例1: 未开始的活动
+    print("\n[1/3] 测试未开始的活动...")
+    latest1 = {
+        "name": "测试项目 - 未开始",
+        "status": "Active",
+        "startTime": int((datetime.now() + timedelta(hours=2)).timestamp()),
+        "endTime": int((datetime.now() + timedelta(days=7)).timestamp()),
+    }
+    text1 = build_notify_text("测试项目", "test_project", latest1, "https://app.galxe.com/quest/test")
+    send_telegram(cfg, text1, "test_project")
+    print("✅ 已发送")
+    
+    # 测试用例2: 进行中的活动
+    print("\n[2/3] 测试进行中的活动...")
+    latest2 = {
+        "name": "测试项目 - 进行中",
+        "status": "Active",
+        "startTime": int((datetime.now() - timedelta(hours=1)).timestamp()),
+        "endTime": int((datetime.now() + timedelta(days=3)).timestamp()),
+    }
+    text2 = build_notify_text("测试项目", "test_project", latest2, "https://app.galxe.com/quest/test")
+    send_telegram(cfg, text2, "test_project")
+    print("✅ 已发送")
+    
+    # 测试用例3: 即将结束的活动
+    print("\n[3/3] 测试即将结束的活动...")
+    latest3 = {
+        "name": "测试项目 - 即将结束",
+        "status": "Active",
+        "startTime": int((datetime.now() - timedelta(days=5)).timestamp()),
+        "endTime": int((datetime.now() + timedelta(hours=6)).timestamp()),
+    }
+    text3 = build_notify_text("测试项目", "test_project", latest3, "https://app.galxe.com/quest/test")
+    send_telegram(cfg, text3, "test_project")
+    print("✅ 已发送")
+    
+    print("\n" + "=" * 50)
     print("✅ 测试完成! 请检查Telegram是否收到3条消息")
-    print("=" * 60)
 
 
 if __name__ == "__main__":
-    # 如果提供了参数,则使用参数作为chat_id
-    chat_id = sys.argv[1] if len(sys.argv) > 1 else None
-    test_notification(chat_id)
+    test_notification()
