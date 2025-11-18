@@ -380,16 +380,26 @@ def build_notify_text(project_name: str, alias: str, latest: Dict, url: Optional
     end = format_time(latest.get("endTime")) if latest else "-"
     status = build_status(latest)
     
-    lines = [
-        "【NTX Quest Radar】发现新活动",
-        f"项目：{project_name} (@{alias})",
-        f"活动：{title}",
-        f"状态：{status}",
-        f"开始时间：{start}",
-        f"结束时间：{end}",
-        f"链接：{url or '-'}",
-    ]
-    return "\n".join(lines)
+    # 状态图标
+    status_icon = "⏳" if "未开始" in status else "✅" if "进行中" in status else "🔴"
+    
+    message = f"""
+🔔 <b>NTX Quest Radar - 新活动通知</b>
+
+{status_icon} 状态: <b>{status}</b>
+📊 项目: <b>{project_name}</b>
+🆔 Alias: <code>{alias}</code>
+📢 活动: <b>{title}</b>
+
+⏰ 开始: {start}
+⏰ 结束: {end}
+
+🔗 <a href="{url}">立即参与</a>
+━━━━━━━━━━━━━━━━━━
+⚡ 自动推送 | 监控236个项目
+    """.strip()
+    
+    return message
 
 
 def send_telegram(cfg: dict, text: str):
@@ -439,15 +449,16 @@ def should_notify(latest: Dict) -> bool:
     """判断是否应该推送通知
     
     推送条件:
-    1. 活动正在进行中
-    2. 开始时间在近30天内
+    1. 活动未开始 或 正在进行中
+    2. 活动结束时间在未来60天内
+    3. 活动未结束
     """
     if not latest:
         return False
     
     now = datetime.now(timezone.utc)
     
-    # 检查活动状态
+    # 检查活动时间
     start_ts = latest.get("startTime")
     end_ts = latest.get("endTime")
     
@@ -460,14 +471,23 @@ def should_notify(latest: Dict) -> bool:
     except:
         return False
     
-    # 条件1: 活动必须正在进行中
-    if now < start_time or now > end_time:
+    # 条件1: 活动不能已经结束
+    if now > end_time:
+        logger.debug(f"跳过推送 - 活动已结束")
         return False
     
-    # 条件2: 开始时间在近30天内
-    days_since_start = (now - start_time).days
-    if days_since_start > 30:
+    # 条件2: 结束时间不能太遥远(60天后)
+    days_until_end = (end_time - now).days
+    if days_until_end > 60:
+        logger.debug(f"跳过推送 - 活动结束时间太远({days_until_end}天后)")
         return False
+    
+    # 条件3: 开始时间不能太早(超过30天前开始的不推送)
+    if now > start_time:
+        days_since_start = (now - start_time).days
+        if days_since_start > 30:
+            logger.debug(f"跳过推送 - 活动开始时间太久({days_since_start}天前)")
+            return False
     
     return True
 
