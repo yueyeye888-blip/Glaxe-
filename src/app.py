@@ -298,9 +298,14 @@ def get_status_group(project: dict) -> int:
     1 - 进行中
     2 - 未知
     3 - 已结束
-    4 - 其它
+    4 - 暂无活动（排最后）
     """
-    latest = project.get("latest") or {}
+    latest = project.get("latest")
+    
+    # 没有活动的项目排在最后
+    if not latest:
+        return 4
+    
     status = build_status(latest) or ""
     
     if "未开始" in status or "⏳" in status:
