@@ -2,6 +2,8 @@
 
 一个基于 Galxe Open API 的项目任务监控工具,支持实时跟踪任务状态、管理多个项目、以及多渠道通知推送。
 
+📚 **[快速使用指南](docs/QUICK_START.md)** | 📖 **[多Bot多群组配置](docs/notify_targets_config.md)**
+
 ## 功能特性
 
 - 🎯 **实时监控**: 通过 Galxe Open API 实时获取任务数据
