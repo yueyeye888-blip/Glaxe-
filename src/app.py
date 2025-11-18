@@ -398,19 +398,27 @@ def send_telegram(cfg: dict, text: str):
     chat_id = cfg.get("telegram_chat_id") or ""
     
     if not token or not chat_id:
-        return
-    
-    # 验证 chat_id 格式
-    if chat_id.startswith("@"):
-        logger.warning("telegram_chat_id 格式错误，应该是数字 ID，不是用户名")
+        logger.warning("Telegram 配置不完整,跳过推送")
         return
     
     try:
         url = f"https://api.telegram.org/bot{token}/sendMessage"
-        requests.post(url, data={"chat_id": chat_id, "text": text}, timeout=10)
-        logger.info("Telegram 通知已发送")
+        payload = {
+            "chat_id": chat_id,
+            "text": text,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": False
+        }
+        response = requests.post(url, json=payload, timeout=10)
+        
+        if response.status_code == 200:
+            logger.info(f"✅ Telegram 通知已发送到 {chat_id}")
+        else:
+            error_msg = response.json().get("description", "未知错误")
+            logger.error(f"❌ Telegram 推送失败 [{response.status_code}]: {error_msg}")
+            logger.error(f"   Chat ID: {chat_id}")
     except Exception as e:
-        logger.error(f"Telegram 推送失败: {e}")
+        logger.error(f"❌ Telegram 推送异常: {e}")
 
 
 def send_discord(cfg: dict, text: str):
@@ -427,11 +435,53 @@ def send_discord(cfg: dict, text: str):
         logger.error(f"Discord 推送失败: {e}")
 
 
+def should_notify(latest: Dict) -> bool:
+    """判断是否应该推送通知
+    
+    推送条件:
+    1. 活动正在进行中
+    2. 开始时间在近30天内
+    """
+    if not latest:
+        return False
+    
+    now = datetime.now(timezone.utc)
+    
+    # 检查活动状态
+    start_ts = latest.get("startTime")
+    end_ts = latest.get("endTime")
+    
+    if not start_ts or not end_ts:
+        return False
+    
+    try:
+        start_time = datetime.fromtimestamp(int(start_ts) / 1000, timezone.utc)
+        end_time = datetime.fromtimestamp(int(end_ts) / 1000, timezone.utc)
+    except:
+        return False
+    
+    # 条件1: 活动必须正在进行中
+    if now < start_time or now > end_time:
+        return False
+    
+    # 条件2: 开始时间在近30天内
+    days_since_start = (now - start_time).days
+    if days_since_start > 30:
+        return False
+    
+    return True
+
+
 def send_notifications(cfg: dict, project_name: str, alias: str, latest: Dict, url: Optional[str]):
     """发送通知（支持 Telegram/Discord）"""
     method = (cfg.get("notify_method") or "none").lower()
     
     if method == "none":
+        return
+    
+    # 检查是否应该推送
+    if not should_notify(latest):
+        logger.info(f"⏭️  跳过推送 [{project_name}] - 不符合推送条件")
         return
     
     text = build_notify_text(project_name, alias, latest, url)
