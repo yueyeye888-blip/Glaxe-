@@ -1342,10 +1342,7 @@ def manage():
 def add():
     """添加单个项目"""
     cfg = load_config()
-    pwd = request.args.get("pwd", "")
-    
-    if pwd != cfg.get("webui_password"):
-        return "Unauthorized", 401
+    pwd = ""  # 已移除密码验证
     
     name = (request.args.get("name") or "").strip()
     alias = (request.args.get("alias") or "").strip()
@@ -1369,10 +1366,7 @@ def add():
 def add_bulk():
     """批量添加项目"""
     cfg = load_config()
-    pwd = request.values.get("pwd", "")
-    
-    if pwd != cfg.get("webui_password"):
-        return "Unauthorized", 401
+    pwd = ""  # 已移除密码验证
     
     text = (request.values.get("bulk") or "").strip()
     if not text:
@@ -1440,10 +1434,7 @@ def add_bulk():
 def delete():
     """删除项目"""
     cfg = load_config()
-    pwd = request.args.get("pwd", "")
-    
-    if pwd != cfg.get("webui_password"):
-        return "Unauthorized", 401
+    pwd = ""  # 已移除密码验证
     
     idx = request.args.get("idx") or ""
     try:
@@ -1465,10 +1456,7 @@ def delete():
 def save_notify():
     """保存通知配置"""
     cfg = load_config()
-    pwd = request.form.get("pwd", "")
-    
-    if pwd != cfg.get("webui_password"):
-        return "Unauthorized", 401
+    pwd = ""  # 已移除密码验证
     
     method = (request.form.get("notify_method") or "none").lower()
     discord = request.form.get("discord_webhook_url") or ""
@@ -1485,10 +1473,7 @@ def save_notify():
 def add_notify_target():
     """添加Telegram推送目标"""
     cfg = load_config()
-    pwd = request.form.get("pwd", "")
-    
-    if pwd != cfg.get("webui_password"):
-        return "Unauthorized", 401
+    pwd = ""  # 已移除密码验证
     
     name = request.form.get("name", "").strip()
     bot_token = request.form.get("bot_token", "").strip()
@@ -1524,10 +1509,7 @@ def add_notify_target():
 def delete_notify_target():
     """删除Telegram推送目标"""
     cfg = load_config()
-    pwd = request.form.get("pwd", "")
-    
-    if pwd != cfg.get("webui_password"):
-        return "Unauthorized", 401
+    pwd = ""  # 已移除密码验证
     
     index = int(request.form.get("index", -1))
     
@@ -1545,10 +1527,7 @@ def delete_notify_target():
 def notify_test():
     """测试通知"""
     cfg = load_config()
-    pwd = request.args.get("pwd", "")
-    
-    if pwd != cfg.get("webui_password"):
-        return "Unauthorized", 401
+    pwd = ""  # 已移除密码验证
     
     method = (cfg.get("notify_method") or "none").lower()
     if method == "none":
