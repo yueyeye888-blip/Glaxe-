@@ -54,6 +54,16 @@ last_notified = {}  # alias -> last campaign id
 
 # =============== 配置管理 ===============
 
+def load_state():
+    """加载监控状态"""
+    try:
+        if os.path.exists(STATE_PATH):
+            with open(STATE_PATH, "r", encoding="utf-8") as f:
+                return json.load(f)
+    except Exception as e:
+        logger.error(f"加载状态失败: {e}")
+    return {"last_loop": "", "projects": []}
+
 def ensure_config():
     """确保配置文件存在，不存在则创建默认配置"""
     if not os.path.exists(CONFIG_PATH):
@@ -112,7 +122,20 @@ def load_initial_state() -> dict:
                 return json.load(f)
     except Exception as e:
         logger.warning(f"加载状态文件失败: {e}")
-    return {"last_loop": "", "projects": []}
+    
+    # 如果状态文件不存在,从配置文件生成初始状态
+    logger.info("状态文件不存在,从配置文件生成初始状态")
+    cfg = load_config()
+    projects = []
+    for p in cfg.get("projects", []):
+        projects.append({
+            "name": p.get("name", p.get("alias")),
+            "alias": p.get("alias"),
+            "category": p.get("category", "custom"),
+            "latest": None,
+            "url": "#"
+        })
+    return {"last_loop": "等待首次监控循环...", "projects": projects}
 
 
 # =============== OpenAPI 查询 ===============
