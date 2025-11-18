@@ -979,14 +979,52 @@ def manage():
         rows = '<tr><td colspan="4">暂无项目，请在上方操作面板中添加。</td></tr>'
     
     method = (cfg.get("notify_method") or "none").lower()
-    tg_bot = cfg.get("telegram_bot_token", "")
-    tg_chat = cfg.get("telegram_chat_id", "")
     discord = cfg.get("discord_webhook_url", "")
     
     sel_none = "selected" if method == "none" else ""
     sel_tg = "selected" if method == "telegram" else ""
     sel_dc = "selected" if method == "discord" else ""
     sel_both = "selected" if method == "both" else ""
+    
+    # 生成notify_targets列表HTML
+    notify_targets = cfg.get("notify_targets", [])
+    if notify_targets:
+        targets_html = '<div style="margin-top:8px;">'
+        for i, target in enumerate(notify_targets):
+            name = target.get("name", f"目标{i+1}")
+            bot_token = target.get("bot_token", "")[:20] + "..."
+            chat_id = target.get("chat_id", "")
+            enabled = target.get("enabled", True)
+            projects = target.get("projects", [])
+            status_icon = "✅" if enabled else "❌"
+            status_text = "启用" if enabled else "禁用"
+            projects_text = ", ".join(projects[:3]) if projects else "全部项目"
+            if len(projects) > 3:
+                projects_text += f" +{len(projects)-3}个"
+            
+            targets_html += f'''
+              <div style="padding:12px;margin-bottom:8px;background:rgba(17,24,39,0.5);border-radius:6px;border:1px solid rgba(96,165,250,0.2);">
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <div style="flex:1;">
+                    <div style="font-weight:bold;margin-bottom:4px;">{status_icon} {name}</div>
+                    <div style="font-size:0.85em;color:#9ca3af;">
+                      <span>Token: {bot_token}</span> | 
+                      <span>Chat ID: {chat_id}</span> | 
+                      <span>过滤: {projects_text}</span> | 
+                      <span style="color:{'#10b981' if enabled else '#ef4444'};">{status_text}</span>
+                    </div>
+                  </div>
+                  <form method="POST" action="/delete_notify_target" style="margin:0;">
+                    <input type="hidden" name="pwd" value="{pwd}">
+                    <input type="hidden" name="index" value="{i}">
+                    <button type="submit" class="btn" style="background:#ef4444;padding:6px 12px;" onclick="return confirm('确认删除该推送目标?')">删除</button>
+                  </form>
+                </div>
+              </div>
+            '''
+        targets_html += '</div>'
+    else:
+        targets_html = '<div style="padding:12px;color:#9ca3af;background:rgba(17,24,39,0.3);border-radius:6px;margin-top:8px;">💡 暂无推送目标,请添加第一个</div>'
     
     html = f"""
     <!DOCTYPE html>
@@ -1205,14 +1243,36 @@ def manage():
                 <a class="btn" href="/notify_test?pwd={pwd}">发送测试通知</a>
               </div>
               <div class="form-row">
-                <label>Telegram Bot Token</label>
-                <input name="telegram_bot_token" value="{tg_bot}" placeholder="123456:ABC-DEF...">
-                <label>Telegram Chat ID</label>
-                <input name="telegram_chat_id" value="{tg_chat}" placeholder="数字格式">
-              </div>
-              <div class="form-row">
                 <label>Discord Webhook URL</label>
                 <input style="flex:1;min-width:260px;" name="discord_webhook_url" value="{discord}" placeholder="https://discord.com/api/webhooks/...">
+              </div>
+            </form>
+
+            <h3 style="margin-top:24px;margin-bottom:12px;color:#60a5fa;">📱 Telegram 推送目标</h3>
+            {targets_html}
+
+            <form method="POST" action="/add_notify_target" style="margin-top:16px;padding:16px;background:rgba(96,165,250,0.05);border-radius:8px;">
+              <input type="hidden" name="pwd" value="{pwd}">
+              <div style="margin-bottom:12px;font-weight:bold;color:#60a5fa;">➕ 添加新的推送目标</div>
+              <div class="form-row">
+                <label>名称</label>
+                <input name="name" placeholder="例如: VIP群" required style="flex:0.5;">
+                <label>Bot Token</label>
+                <input name="bot_token" placeholder="123456:ABC-DEF..." required style="flex:1;">
+              </div>
+              <div class="form-row">
+                <label>Chat ID</label>
+                <input name="chat_id" placeholder="-1001234567890" required style="flex:0.5;">
+                <label>项目过滤</label>
+                <input name="projects" placeholder="留空=全部, 或填: bnbchain,Galxe" style="flex:1;">
+              </div>
+              <div class="form-row">
+                <label>状态</label>
+                <select name="enabled" style="flex:0.3;">
+                  <option value="true">启用</option>
+                  <option value="false">禁用</option>
+                </select>
+                <button type="submit" class="btn btn-primary" style="margin-left:auto;">添加目标</button>
               </div>
             </form>
           </div>
@@ -1344,18 +1404,74 @@ def save_notify():
         return "Unauthorized", 401
     
     method = (request.form.get("notify_method") or "none").lower()
-    tg_bot = request.form.get("telegram_bot_token") or ""
-    tg_chat = request.form.get("telegram_chat_id") or ""
     discord = request.form.get("discord_webhook_url") or ""
     
     cfg["notify_method"] = method
-    cfg["telegram_bot_token"] = tg_bot
-    cfg["telegram_chat_id"] = tg_chat
     cfg["discord_webhook_url"] = discord
     save_config(cfg)
     
     logger.info(f"通知配置已更新: {method}")
     return f"通知配置已保存（当前：{method}）。<a href='/manage?pwd={pwd}'>返回管理页面</a>"
+
+
+@app.route("/add_notify_target", methods=["POST"])
+def add_notify_target():
+    """添加Telegram推送目标"""
+    cfg = load_config()
+    pwd = request.form.get("pwd", "")
+    
+    if pwd != cfg.get("webui_password"):
+        return "Unauthorized", 401
+    
+    name = request.form.get("name", "").strip()
+    bot_token = request.form.get("bot_token", "").strip()
+    chat_id = request.form.get("chat_id", "").strip()
+    projects_str = request.form.get("projects", "").strip()
+    enabled = request.form.get("enabled", "true") == "true"
+    
+    if not name or not bot_token or not chat_id:
+        return "❌ 名称、Bot Token和Chat ID不能为空。<a href='/manage?pwd={pwd}'>返回</a>"
+    
+    # 解析projects
+    projects = [p.strip() for p in projects_str.split(",") if p.strip()] if projects_str else []
+    
+    # 添加到notify_targets
+    if "notify_targets" not in cfg:
+        cfg["notify_targets"] = []
+    
+    cfg["notify_targets"].append({
+        "name": name,
+        "bot_token": bot_token,
+        "chat_id": chat_id,
+        "enabled": enabled,
+        "projects": projects
+    })
+    
+    save_config(cfg)
+    logger.info(f"已添加推送目标: {name} -> {chat_id}")
+    
+    return f"✅ 已添加推送目标: {name}。<a href='/manage?pwd={pwd}'>返回管理页面</a>"
+
+
+@app.route("/delete_notify_target", methods=["POST"])
+def delete_notify_target():
+    """删除Telegram推送目标"""
+    cfg = load_config()
+    pwd = request.form.get("pwd", "")
+    
+    if pwd != cfg.get("webui_password"):
+        return "Unauthorized", 401
+    
+    index = int(request.form.get("index", -1))
+    
+    if "notify_targets" not in cfg or index < 0 or index >= len(cfg["notify_targets"]):
+        return "❌ 无效的索引。<a href='/manage?pwd={pwd}'>返回</a>"
+    
+    deleted = cfg["notify_targets"].pop(index)
+    save_config(cfg)
+    
+    logger.info(f"已删除推送目标: {deleted.get('name', '未命名')}")
+    return f"✅ 已删除推送目标: {deleted.get('name', '未命名')}。<a href='/manage?pwd={pwd}'>返回管理页面</a>"
 
 
 @app.route("/notify_test")
