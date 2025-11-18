@@ -1023,42 +1023,49 @@ def manage():
     # 生成notify_targets列表HTML
     notify_targets = cfg.get("notify_targets", [])
     if notify_targets:
-        targets_html = '<div style="margin-top:8px;">'
+        targets_html = '<div style="display:grid;gap:12px;margin-top:12px;">'
         for i, target in enumerate(notify_targets):
             name = target.get("name", f"目标{i+1}")
-            bot_token = target.get("bot_token", "")[:20] + "..."
+            bot_token = target.get("bot_token", "")[:15] + "..."
             chat_id = target.get("chat_id", "")
             enabled = target.get("enabled", True)
             projects = target.get("projects", [])
-            status_icon = "✅" if enabled else "❌"
-            status_text = "启用" if enabled else "禁用"
+            status_icon = "✅" if enabled else "⛔"
+            status_color = "#10b981" if enabled else "#6b7280"
+            border_color = "rgba(16,185,129,0.3)" if enabled else "rgba(107,114,128,0.2)"
             projects_text = ", ".join(projects[:3]) if projects else "全部项目"
             if len(projects) > 3:
-                projects_text += f" +{len(projects)-3}个"
+                projects_text += f" 等{len(projects)}个"
             
             targets_html += f'''
-              <div style="padding:12px;margin-bottom:8px;background:rgba(17,24,39,0.5);border-radius:6px;border:1px solid rgba(96,165,250,0.2);">
-                <div style="display:flex;align-items:center;justify-content:space-between;">
-                  <div style="flex:1;">
-                    <div style="font-weight:bold;margin-bottom:4px;">{status_icon} {name}</div>
-                    <div style="font-size:0.85em;color:#9ca3af;">
-                      <span>Token: {bot_token}</span> | 
-                      <span>Chat ID: {chat_id}</span> | 
-                      <span>过滤: {projects_text}</span> | 
-                      <span style="color:{'#10b981' if enabled else '#ef4444'};">{status_text}</span>
+              <div style="background:linear-gradient(135deg, rgba(17,24,39,0.6) 0%, rgba(31,41,55,0.4) 100%);border-radius:10px;border:1px solid {border_color};padding:16px;transition:all 0.3s;">
+                <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
+                  <div style="flex:1;min-width:0;">
+                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
+                      <span style="font-size:20px;">{status_icon}</span>
+                      <span style="font-weight:600;font-size:15px;color:#e5e7eb;">{name}</span>
+                      <span style="padding:2px 8px;background:{status_color}22;color:{status_color};border-radius:12px;font-size:11px;font-weight:500;">{'已启用' if enabled else '已禁用'}</span>
+                    </div>
+                    <div style="display:grid;grid-template-columns:auto 1fr;gap:8px 12px;font-size:13px;color:#9ca3af;">
+                      <span style="color:#60a5fa;">🤖 Token:</span>
+                      <span style="font-family:monospace;font-size:12px;">{bot_token}</span>
+                      <span style="color:#60a5fa;">💬 Chat ID:</span>
+                      <span style="font-family:monospace;font-size:12px;">{chat_id}</span>
+                      <span style="color:#60a5fa;">🎯 过滤:</span>
+                      <span>{projects_text}</span>
                     </div>
                   </div>
                   <form method="POST" action="/delete_notify_target" style="margin:0;">
                     <input type="hidden" name="pwd" value="{pwd}">
                     <input type="hidden" name="index" value="{i}">
-                    <button type="submit" class="btn" style="background:#ef4444;padding:6px 12px;" onclick="return confirm('确认删除该推送目标?')">删除</button>
+                    <button type="submit" class="btn" style="background:linear-gradient(135deg, #ef4444 0%, #dc2626 100%);color:white;padding:8px 16px;border:none;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 12px rgba(239,68,68,0.4)'" onmouseout="this.style.transform='';this.style.boxShadow=''" onclick="return confirm('确认删除推送目标: {name}?')">🗑️ 删除</button>
                   </form>
                 </div>
               </div>
             '''
         targets_html += '</div>'
     else:
-        targets_html = '<div style="padding:12px;color:#9ca3af;background:rgba(17,24,39,0.3);border-radius:6px;margin-top:8px;">💡 暂无推送目标,请添加第一个</div>'
+        targets_html = '<div style="padding:20px;text-align:center;color:#9ca3af;background:linear-gradient(135deg, rgba(17,24,39,0.4) 0%, rgba(31,41,55,0.2) 100%);border-radius:10px;border:1px dashed rgba(96,165,250,0.3);margin-top:12px;"><div style="font-size:32px;margin-bottom:8px;">📱</div><div style="font-size:14px;">暂无推送目标</div><div style="font-size:12px;margin-top:4px;color:#6b7280;">请在下方添加第一个推送目标</div></div>'
     
     html = f"""
     <!DOCTYPE html>
@@ -1282,12 +1289,19 @@ def manage():
               </div>
             </form>
 
-            <h3 style="margin-top:24px;margin-bottom:12px;color:#60a5fa;">📱 Telegram 推送目标</h3>
+            <div style="margin-top:32px;margin-bottom:16px;display:flex;align-items:center;gap:12px;">
+              <span style="font-size:28px;">📱</span>
+              <h3 style="margin:0;font-size:20px;font-weight:600;color:#e5e7eb;">Telegram 推送目标</h3>
+              <div style="flex:1;height:1px;background:linear-gradient(to right, rgba(96,165,250,0.3), transparent);"></div>
+            </div>
             {targets_html}
 
-            <form method="POST" action="/add_notify_target" style="margin-top:16px;padding:16px;background:rgba(96,165,250,0.05);border-radius:8px;">
+            <form method="POST" action="/add_notify_target" style="margin-top:20px;padding:20px;background:linear-gradient(135deg, rgba(16,185,129,0.08) 0%, rgba(5,150,105,0.05) 100%);border-radius:12px;border:1px solid rgba(16,185,129,0.2);">
               <input type="hidden" name="pwd" value="{pwd}">
-              <div style="margin-bottom:12px;font-weight:bold;color:#60a5fa;">➕ 添加新的推送目标</div>
+              <div style="margin-bottom:16px;display:flex;align-items:center;gap:8px;">
+                <span style="font-size:20px;">➕</span>
+                <span style="font-weight:600;font-size:15px;color:#10b981;">添加新的推送目标</span>
+              </div>
               <div class="form-row">
                 <label>名称</label>
                 <input name="name" placeholder="例如: VIP群" required style="flex:0.5;">
