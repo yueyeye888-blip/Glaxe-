@@ -384,7 +384,7 @@ def build_notify_text(project_name: str, alias: str, latest: Dict, url: Optional
     status_icon = "⏳" if "未开始" in status else "✅" if "进行中" in status else "🔴"
     
     message = f"""
-🔔 <b>NTX Quest Radar - 新活动通知</b>
+<b>Galxe 空投任务提醒</b>
 
 {status_icon} 状态: <b>{status}</b>
 📊 项目: <b>{project_name}</b>
@@ -394,7 +394,10 @@ def build_notify_text(project_name: str, alias: str, latest: Dict, url: Optional
 ⏰ 开始: {start}
 ⏰ 结束: {end}
 
-🔗 <a href="{url}">立即参与</a>
+🔗 <a href="{url}">立即参与 Galxe 任务</a>
+
+━━━━━━━━━━━━━━━
+<i>💡 由 NTX 社区提供</i>
     """.strip()
     
     return message
