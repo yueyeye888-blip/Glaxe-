@@ -707,125 +707,153 @@ def index():
     
     html = f"""
     <!DOCTYPE html>
-    <html>
+    <html lang="zh-CN">
     <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>NTX Quest Radar 控制台</title>
+      <title>NTX Quest Radar · Galxe监控</title>
       <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         body {{
-          background: #020617;
-          color: #e5e7eb;
-          font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+          margin: 0;
+          font-family: -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+          background: radial-gradient(circle at top,#131b2a 0,#050812 55%,#020308 100%);
+          color: #e5efff;
         }}
-        .shell {{
-          min-height: 100vh;
-          background: radial-gradient(circle at top left,#0b1120 0,#020617 45%);
-        }}
-        .container {{
-          max-width: 1100px;
+        .app-root {{
+          max-width: 1440px;
           margin: 0 auto;
-          padding: 20px 16px 40px;
+          padding: 20px 24px 40px;
         }}
-        .top-nav {{
-          display:flex;
-          justify-content:space-between;
-          align-items:center;
-          margin-bottom:12px;
-        }}
-        .brand {{
-          font-size:20px;
-          font-weight:600;
-        }}
-        .brand span {{
-          font-size:11px;
-          color:#9ca3af;
-          margin-left:6px;
-        }}
-        .nav-links a {{
-          font-size:13px;
-          margin-left:10px;
-          color:#9ca3af;
-          text-decoration:none;
-          padding:4px 10px;
-          border-radius:999px;
-          border:1px solid transparent;
-        }}
-        .nav-links a.active {{
-          color:#e5e7eb;
-          border-color:#1d4ed8;
-          background:#1d4ed833;
-        }}
-        .subtitle {{
-          font-size:13px;
-          color: #9ca3af;
-          margin-bottom: 14px;
-        }}
-        .controls-bar {{
+        .app-header {{
           display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }}
+        .app-title-row {{
+          display: flex;
+          align-items: center;
           justify-content: space-between;
-          align-items: center;
-          gap: 20px;
-          margin-bottom: 24px;
+          gap: 12px;
         }}
-        .search-form {{
+        .app-title-left {{
           display: flex;
-          gap: 10px;
-          align-items: center;
-          flex: 1;
-          max-width: 420px;
+          align-items: baseline;
+          gap: 12px;
         }}
-        .search-input-wrapper {{
+        .logo-text {{
+          font-size: 22px;
+          font-weight: 700;
+          letter-spacing: .04em;
+        }}
+        .logo-badge {{
+          font-size: 11px;
+          padding: 2px 6px;
+          border-radius: 999px;
+          border: 1px solid rgba(126,202,255,.35);
+          color: #7ecaff;
+          background: linear-gradient(135deg,rgba(87,148,255,.15),rgba(74,222,222,.03));
+        }}
+        .app-title-sub {{
+          font-size: 12px;
+          color: #7c8aa5;
+        }}
+        .stat-bar {{
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          flex-wrap: wrap;
+          font-size: 12px;
+        }}
+        .stat-label-main {{
+          color: #9fb5ff;
+        }}
+        .stat-badges {{
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+        }}
+        .stat-pill {{
+          padding: 2px 8px;
+          border-radius: 999px;
+          background: rgba(15,23,42,.9);
+          border: 1px solid rgba(148,163,184,.3);
+          color: #cbd5f5;
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+        }}
+        .stat-pill strong {{
+          color: #e5edff;
+          font-weight: 600;
+        }}
+        .stat-pill.green {{ border-color: rgba(45,212,191,.5); }}
+        .stat-pill.yellow{{ border-color: rgba(250,204,21,.55); }}
+        .stat-pill.gray  {{ border-color: rgba(148,163,184,.6); }}
+        .toolbar-row {{
           display: flex;
           align-items: center;
           gap: 10px;
-          flex: 1;
-          background: rgba(17, 24, 39, 0.6);
-          border: 1px solid rgba(96, 165, 250, 0.15);
-          border-radius: 8px;
-          padding: 10px 12px;
+          margin-top: 8px;
+          flex-wrap: wrap;
         }}
-        .search-input-wrapper input {{
+        .login-pill {{
+          padding: 4px 10px;
+          border-radius: 999px;
+          background: rgba(15,23,42,.9);
+          border: 1px solid rgba(148,163,184,.35);
+          font-size: 12px;
+        }}
+        .login-pill span {{
+          color: #9ca3af;
+        }}
+        .login-pill strong {{
+          color: #e5efff;
+        }}
+        .search-box {{
           flex: 1;
-          background: transparent;
-          border: none;
-          color: #e5e7eb;
+          min-width: 220px;
+          position: relative;
+        }}
+        .search-input {{
+          width: 100%;
+          padding: 7px 12px;
+          border-radius: 999px;
+          border: 1px solid rgba(148,163,184,.45);
+          background: rgba(15,23,42,.95);
+          color: #e5efff;
+          font-size: 13px;
           outline: none;
-          font-size: 13px;
         }}
-        .search-form button {{
-          padding: 10px 16px;
-          border-radius: 8px;
-          border: 1px solid rgba(96, 165, 250, 0.2);
-          background: rgba(96, 165, 250, 0.08);
-          color: #60a5fa;
-          font-weight: 500;
-          font-size: 13px;
-          cursor: pointer;
+        .search-input::placeholder {{
+          color: #6b7280;
         }}
-        .filters {{
+        .tag-tabs {{
           display: flex;
           gap: 8px;
+          flex-wrap: wrap;
         }}
-        .filter-tag {{
-          font-size: 13px;
-          padding: 8px 12px;
-          border-radius: 6px;
-          border: 1px solid rgba(96, 165, 250, 0.2);
-          color: #94a3b8;
+        .tag-tab {{
+          font-size: 12px;
+          padding: 4px 12px;
+          border-radius: 999px;
+          border: 1px solid transparent;
+          background: rgba(15,23,42,.92);
+          color: #9ca3af;
+          cursor: pointer;
           text-decoration: none;
+          user-select: none;
         }}
-        .filter-tag.active {{
-          background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(96, 165, 250, 0.15) 100%);
-          border-color: rgba(96, 165, 250, 0.3);
-          color: #60a5fa;
-          font-weight: 500;
+        .tag-tab.active {{
+          background: linear-gradient(135deg,#22d3ee,#4f46e5);
+          color: #e5f2ff;
+          border-color: transparent;
+          box-shadow: 0 0 0 1px rgba(59,130,246,.4), 0 10px 25px rgba(15,23,42,.75);
         }}
         .btn-manage {{
-          font-size: 13px;
-          padding: 10px 16px;
-          border-radius: 8px;
+          font-size: 12px;
+          padding: 4px 12px;
+          border-radius: 999px;
           background: linear-gradient(135deg, #06b6d4 0%, #0ea5e9 100%);
           color: #fff;
           text-decoration: none;
@@ -833,25 +861,28 @@ def index():
         }}
         .grid {{
           display: grid;
-          grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+          grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
           gap: 14px;
+          margin-top: 18px;
         }}
         .card {{
-          background: radial-gradient(circle at top left,#111827 0,#020617 55%);
-          border-radius: 14px;
-          border: 1px solid #111827;
+          background: radial-gradient(circle at top left,rgba(56,189,248,.05),rgba(15,23,42,.98));
+          border-radius: 16px;
+          border: 1px solid rgba(148,163,184,.3);
           padding: 12px 14px;
-          box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+          box-shadow: 0 16px 30px rgba(15,23,42,.8);
         }}
         .card-header {{
           display:flex;
           justify-content:space-between;
-          align-items:center;
+          align-items:flex-start;
+          gap:6px;
           margin-bottom:8px;
         }}
         .card-title {{
           font-size:15px;
           font-weight:600;
+          color:#e5edff;
         }}
         .card-sub {{
           font-size:11px;
@@ -863,6 +894,7 @@ def index():
           padding:3px 8px;
           font-size:11px;
           border:1px solid;
+          white-space:nowrap;
         }}
         .pill-running {{
           background:#16a34a33;
@@ -916,44 +948,43 @@ def index():
       </style>
     </head>
     <body>
-      <div class="shell">
-        <div class="container">
-          <div class="top-nav">
-            <div class="brand">
-              NTX Quest Radar
-              <span>OpenAPI · V4.0</span>
-            </div>
-            <div class="nav-links">
-              <a href="/?pwd={pwd}" class="active">活动监控</a>
-              <a href="/manage?pwd={pwd}">项目管理</a>
-            </div>
-          </div>
-
-          <div class="subtitle">
-            最后刷新：{last_utc8}
-          </div>
-
-          <div class="controls-bar">
-            <form class="search-form" method="GET" action="/">
-              <input type="hidden" name="pwd" value="{pwd}">
-              <div class="search-input-wrapper">
-                <input type="text" name="q" placeholder="搜索项目…" value="{q}">
+      <div class="app-root">
+        <header class="app-header">
+          <div class="app-title-row">
+            <div class="app-title-left">
+              <div>
+                <div class="logo-text">NTX QUEST RADAR</div>
+                <div class="app-title-sub">Galxe 空投项目集中监控 · Powered by NTX 社区</div>
               </div>
-              <button type="submit">搜索</button>
-            </form>
+              <div class="logo-badge">OpenAPI · V4.1</div>
+            </div>
+          </div>
 
-            <div class="filters">
-              <a href="/?pwd={pwd}&cat=all" class="filter-tag {active_all}">全部</a>
-              <a href="/?pwd={pwd}&cat=custom" class="filter-tag {active_custom}">自定义</a>
-              <a href="/?pwd={pwd}&cat=trending" class="filter-tag {active_trending}">热度Top</a>
+          <div class="stat-bar">
+            <div class="stat-label-main">最近刷新：{last_utc8}</div>
+          </div>
+
+          <div class="toolbar-row">
+            <div class="search-box">
+              <form method="GET" action="/" style="margin:0;">
+                <input type="hidden" name="pwd" value="{pwd}">
+                <input type="hidden" name="cat" value="{cat}">
+                <input class="search-input" name="q" placeholder="搜索项目名 / alias / 活动标题…" value="{q}" />
+              </form>
+            </div>
+
+            <div class="tag-tabs">
+              <a href="/?pwd={pwd}&cat=all" class="tag-tab {active_all}">全部</a>
+              <a href="/?pwd={pwd}&cat=custom" class="tag-tab {active_custom}">自定义</a>
+              <a href="/?pwd={pwd}&cat=trending" class="tag-tab {active_trending}">热度Top</a>
             </div>
 
             <a href="/manage?pwd={pwd}" class="btn-manage">项目管理</a>
           </div>
+        </header>
 
-          <div class="grid">
-            {cards or '<div style="color:#9ca3af;font-size:13px;">当前没有任何项目。</div>'}
-          </div>
+        <div class="grid">
+          {cards or '<div style="color:#9ca3af;font-size:13px;padding:20px;">当前没有任何项目。</div>'}
         </div>
       </div>
     </body>
