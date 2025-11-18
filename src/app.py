@@ -677,10 +677,7 @@ def card_html(p: dict) -> str:
 def index():
     """主页 - 活动监控"""
     cfg = load_config()
-    pwd = request.args.get("pwd", "")
-    
-    if pwd != cfg.get("webui_password"):
-        return "Unauthorized", 401
+    pwd = ""  # 已移除密码验证
     
     q = (request.args.get("q") or "").lower()
     cat = (request.args.get("cat") or "all").lower()
@@ -997,10 +994,7 @@ def index():
 def manage():
     """项目管理页面"""
     cfg = load_config()
-    pwd = request.args.get("pwd", "")
-    
-    if pwd != cfg.get("webui_password"):
-        return "Unauthorized", 401
+    pwd = ""  # 已移除密码验证
     
     rows = ""
     for i, p in enumerate(cfg.get("projects", [])):
