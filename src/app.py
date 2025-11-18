@@ -1372,6 +1372,11 @@ def add_bulk():
     
     lines = text.splitlines()
     added = 0
+    skipped = 0
+    skipped_list = []
+    
+    # 获取现有项目的所有 alias,用于去重检测
+    existing_aliases = {p.get("alias") for p in cfg.get("projects", [])}
     
     for line in lines:
         line = line.strip()
@@ -1390,17 +1395,37 @@ def add_bulk():
         else:
             name, alias, category = parts[0], parts[1], parts[2] or "custom"
         
+        # 检查重复
+        if alias in existing_aliases:
+            skipped += 1
+            skipped_list.append(alias)
+            logger.info(f"跳过重复项目: {alias}")
+            continue
+        
+        # 添加新项目
         cfg.setdefault("projects", []).append({
             "name": name,
             "alias": alias,
             "category": category
         })
+        existing_aliases.add(alias)  # 更新已存在列表,防止本次批量导入内部重复
         added += 1
     
     save_config(cfg)
-    logger.info(f"批量添加完成，共 {added} 个项目")
     
-    return f"批量添加完成，共添加 {added} 个项目。<a href='/?pwd={pwd}'>返回首页</a>"
+    # 构建反馈消息
+    msg_parts = []
+    if added > 0:
+        msg_parts.append(f"成功添加 {added} 个项目")
+    if skipped > 0:
+        msg_parts.append(f"跳过 {skipped} 个重复项目")
+        if skipped_list:
+            msg_parts.append(f"(重复项: {', '.join(skipped_list[:5])}{'...' if len(skipped_list) > 5 else ''})")
+    
+    result_msg = "、".join(msg_parts) if msg_parts else "未添加任何项目"
+    logger.info(f"批量添加完成: {result_msg}")
+    
+    return f"批量添加完成,{result_msg}。<a href='/?pwd={pwd}'>返回首页</a>"
 
 
 @app.route("/delete")
